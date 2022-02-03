@@ -2,9 +2,10 @@ const canvas = document.querySelector('.canvas');
 const pincel = canvas.getContext('2d');
 const regex = new RegExp("^[A-Z\b]");
 const erro_Caractere = document.querySelector('.Msg_Erro');
+const palavra_Sorteada = document.querySelector('.palavra_secreta');
 let = lista_Letras = [];
 function palavraSecreta() {
-
+    palavra_Sorteada.innerHTML = '';
     // LENDO A LISTA DE PALAVRAS DO JSON
     readTextFile("./palavras/lista_palavras.json", function (text) {
         // DADOS RECEBIDO DO JSON
@@ -32,7 +33,6 @@ function mostra_Palavra_Dica(palavra, dica) {
     const categoria_Sorteada = document.querySelector('.container_line_categoria');
     categoria_Sorteada.innerHTML = "Dica: " + "[" + dica + "] Com " + palavra.length + " Letras!";
 
-    const palavra_Sorteada = document.querySelector('.palavra_secreta');
     // palavra_Sorteada.innerHTML = palavra;
 
     for (let i = 0; i < palavra.length; i++) {
