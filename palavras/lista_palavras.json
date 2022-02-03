@@ -1,0 +1,54 @@
+[
+    {
+        "categoria": "Objeto",
+        "nome": "Carteira"
+    },
+    {
+        "categoria": "Objeto",
+        "nome": "Mouse"
+    },
+    {
+        "categoria": "Objeto",
+        "nome": "Notebook"
+    },
+    {
+        "categoria": "Lugar",
+        "nome": "Brasil"
+    },
+    {
+        "categoria": "Lugar",
+        "nome": "Paraguaí"
+    },
+    {
+        "categoria": "lugar",
+        "nome": "Bahia"
+    },
+    {
+        "categoria": "Nome",
+        "nome": "Monica"
+    },
+    {
+        "categoria": "Nome",
+        "nome": "Guilhere"
+    },
+    {
+        "categoria": "Nome",
+        "nome": "Maria"
+    },
+    {
+        "categoria": "Animal",
+        "nome": "Cavalo"
+    },
+    {
+        "categoria": "Animal",
+        "nome": "Borboleta"
+    },
+    {
+        "categoria": "Animal",
+        "nome": "Perereca"
+    },
+    {
+        "categoria":"Palavra Secreta",
+        "nome":"Gratulor provocatione"
+    }
+]

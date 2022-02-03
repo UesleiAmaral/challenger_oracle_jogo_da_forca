@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Da Forca</title>
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+
+<body>
+    <header>
+        <button class="btn_header" id="jogar" onclick="">JOGAR</button>
+        <button class="btn_header" onclick="iniciar_jogo()">NOVA PALAVRAS</button>
+        <button class="btn_header">SAIR</button>
+    </header>
+
+    <main class="container">
+        <h1 class="msg">GANHOU/PERDEU</h1>
+<p class="Msg_Erro">LETRAS ERRADAS DIGITADAS</p>
+        <canvas class="canvas">
+        </canvas>
+
+        <div class="palavra_secreta">
+
+            <!-- <div class="Letra_secreta"></div> -->
+        </div>
+        <div class="input_Letra">
+            <input type="text" name="letra_Digitada" id="letra_Digitada">
+            <P class="erro_Caractere"></P>
+        </div>
+
+        <div class="botoesLetras">
+            <button class="button " id="letra_A">A</button>
+            <button class="button ">B</button>
+            <button class="button ">C</button>
+            <button class="button ">D</button>
+            <button class="button ">E</button>
+            <button class="button ">F</button>
+            <button class="button ">G</button>
+            <button class="button ">H</button>
+            <button class="button ">I</button>
+            <button class="button ">J</button>
+            <button class="button ">K</button>
+            <button class="button ">L</button>
+            <button class="button ">M</button>
+            <button class="button ">N</button>
+            <button class="button ">O</button>
+            <button class="button ">P</button>
+            <button class="button ">Q</button>
+            <button class="button ">R</button>
+        </div>
+
+        <div class="container_line_categoria">
+
+            <p class="categoria"></p>
+        </div>
+
+    </main>
+
+
+
+
+
+    <script type="text/javascript" src="./script/desenho.js"></script>
+    <script type="text/javascript" src="./palavras/lista_palavras.json"></script>
+    <script type="text/javascript" src="./script/game.js"></script>
+</body>
+
+</html>
