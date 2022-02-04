@@ -26,7 +26,7 @@ function sorteia_Palavra() {
     encontra_Letra(palavra_Sorteada);
     mostra_Palavra_Dica(palavra_Sorteada, categoria_Sorteada);
 
-    console.log(dados.length);
+    console.log(palavra_Sorteada);
 
 }
 

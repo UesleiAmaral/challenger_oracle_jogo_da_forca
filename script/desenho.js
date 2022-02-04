@@ -1,4 +1,4 @@
-function desenha() {
+function desenha_Boneco_Completo() {
 
     // AREA DA FORCA
     pincel.beginPath();
@@ -96,6 +96,7 @@ function desenha_Area_Forca() {
     pincel.beginPath();
     pincel.moveTo(100, 120);
     pincel.lineWidth = 3;
+    
     pincel.lineTo(100, 9);
     pincel.stroke();
 

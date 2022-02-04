@@ -2,7 +2,7 @@ const canvas = document.querySelector('.canvas');// CANVAS
 const pincel = canvas.getContext('2d');// PINCEL DO CANVAS
 const regex = new RegExp("^[A-Z\b]"); // LETRAS PERMITIDAS
 
-
+// SELEÇÃO DOS ELEMENTOS HTML
 const html_erro_Caractere = document.querySelector('.Msg_Erro');
 const html_palavra_Sorteada = document.querySelector('.palavra_secreta');
 const html_categoria_Sorteada = document.querySelector('.container_line_categoria');
@@ -17,3 +17,4 @@ let dados = ''; // LISTA DE PALAVRA CONVERTIDA EM OBJETO
 let pos = ''; // POSIÇÃO DA LETRA NA PALAVRA
 let palavra_Sorteada = ''; 
 let categoria_Sorteada = ''; // CATEGORIA / DICA
+let chances = 6;
