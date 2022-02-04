@@ -1,54 +1,54 @@
 [
     {
         "categoria": "Objeto",
-        "nome": "Carteira"
+        "palavra": "Carteira"
     },
     {
         "categoria": "Objeto",
-        "nome": "Mouse"
+        "palavra": "Mouse"
     },
     {
         "categoria": "Objeto",
-        "nome": "Notebook"
+        "palavra": "Notebook"
     },
     {
         "categoria": "Lugar",
-        "nome": "Brasil"
+        "palavra": "Brasil"
     },
     {
         "categoria": "Lugar",
-        "nome": "Paraguaí"
+        "palavra": "Paraguaí"
     },
     {
-        "categoria": "lugar",
-        "nome": "Bahia"
+        "categoria": "Lugar",
+        "palavra": "Bahia"
     },
     {
-        "categoria": "Nome",
-        "nome": "Monica"
+        "categoria": "nome",
+        "palavra": "Monica"
     },
     {
-        "categoria": "Nome",
-        "nome": "Guilhere"
+        "categoria": "nome",
+        "palavra": "Guilhere"
     },
     {
-        "categoria": "Nome",
-        "nome": "Maria"
-    },
-    {
-        "categoria": "Animal",
-        "nome": "Cavalo"
+        "categoria": "nome",
+        "palavra": "Maria"
     },
     {
         "categoria": "Animal",
-        "nome": "Borboleta"
+        "palavra": "Cavalo"
     },
     {
         "categoria": "Animal",
-        "nome": "Perereca"
+        "palavra": "Borboleta"
+    },
+    {
+        "categoria": "Animal",
+        "palavra": "Perereca"
     },
     {
         "categoria":"Palavra Secreta",
-        "nome":"Gratulor provocatione"
+        "palavra":"Gratulor provocatione"
     }
 ]

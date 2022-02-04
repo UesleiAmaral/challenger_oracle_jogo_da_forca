@@ -1,79 +1,61 @@
-const canvas = document.querySelector('.canvas');
-const pincel = canvas.getContext('2d');
-const regex = new RegExp("^[A-Z\b]");
-const erro_Caractere = document.querySelector('.Msg_Erro');
-const palavra_Sorteada = document.querySelector('.palavra_secreta');
-let = lista_Letras = [];
-function palavraSecreta() {
-    palavra_Sorteada.innerHTML = '';
-    // LENDO A LISTA DE PALAVRAS DO JSON
-    readTextFile("./palavras/lista_palavras.json", function (text) {
-        // DADOS RECEBIDO DO JSON
-        const dados = JSON.parse(text);
+/* AS VARIAVEIS ESTÃO DECLARADAS EM " var.js "
+O DESENHO ESTA EM " desenho.js " */
 
-        // VARIAVEL DE SORTEIO DA PALAVRA
-        const palavraSec = Math.round(Math.random() * dados.length);
+// OBTENDO O ARQUIVO DE PALAVRAS
+let rawFile = new XMLHttpRequest();
+rawFile.overrideMimeType("application/json");
+rawFile.open("GET", '../palavras/lista_palavras.json', true);
+rawFile.send();
+rawFile.onload = function () {
 
-        // ATRIBUINDO O VALOR DA PALAVRA E CATEGORIA ENCONTRADA
-        const palavra_Sorteada = dados[palavraSec].nome.toUpperCase();
-        const categoria_Sorteada = dados[palavraSec].categoria.toUpperCase();
-        encontra_Letra(palavra_Sorteada);
-        mostra_Palavra_Dica(palavra_Sorteada, categoria_Sorteada);
-    });
+    file = rawFile.response;
+    dados = JSON.parse(file);
+
+    sorteia_Palavra(dados);
 }
-palavraSecreta();
-
-
 
 desenha_Area_Forca();
 
+function sorteia_Palavra() {
 
-function mostra_Palavra_Dica(palavra, dica) {
+    html_palavra_Sorteada.innerHTML = '';
+    pos = Math.round(Math.random() * dados.length);
+    palavra_Sorteada = dados[pos].palavra.toUpperCase();
+    categoria_Sorteada = dados[pos].categoria.toUpperCase();
 
-    const categoria_Sorteada = document.querySelector('.container_line_categoria');
-    categoria_Sorteada.innerHTML = "Dica: " + "[" + dica + "] Com " + palavra.length + " Letras!";
+    encontra_Letra(palavra_Sorteada);
+    mostra_Palavra_Dica(palavra_Sorteada, categoria_Sorteada);
+
+    console.log(dados.length);
+
+}
+
+function mostra_Palavra_Dica() {
+
+    html_categoria_Sorteada.innerHTML = "Dica: " + "[" + categoria_Sorteada + "] Com " + palavra_Sorteada.length + " Letras!";
 
     // palavra_Sorteada.innerHTML = palavra;
 
-    for (let i = 0; i < palavra.length; i++) {
+    for (let i = 0; i < palavra_Sorteada.length; i++) {
 
         if (lista_Letras[i] === undefined) {
             lista_Letras[i] = "&nbsp;";
-            palavra_Sorteada.innerHTML = palavra_Sorteada.innerHTML + "<div class='Letra_secreta'>" + lista_Letras[i] + "</div>"
+            html_palavra_Sorteada.innerHTML = html_palavra_Sorteada.innerHTML + "<div class='Letra_secreta'>" + lista_Letras[i] + "</div>"
         }
 
         else {
 
-            palavra_Sorteada.innerHTML = palavra_Sorteada.innerHTML + "<div class='Letra_secreta'>" + lista_Letras[i] + "</div>"
+            html_palavra_Sorteada.innerHTML = html_palavra_Sorteada.innerHTML + "<div class='Letra_secreta'>" + lista_Letras[i] + "</div>"
         }
     }
 
 }
-function readTextFile(file, callback) {
-    // FUNCAO PARA A LEITURA DO JSON
-    let rawFile = new XMLHttpRequest();
+function encontra_Letra() {
 
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-
-    // STATUS DA RESPOSTA DE LEITURA
-    rawFile.onreadystatechange = function () {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
-    }
-    rawFile.send(null);
-}
-
-function encontra_Letra(palavra_Sorteada) {
-    const input = document.querySelector('#letra_Digitada');
-
-    console.log(palavra_Sorteada);
-
-    input.addEventListener('keypress', (event) => {
+    html_input.addEventListener('keypress', (event) => {
         // event.preventDefault();
-        let value = input.value;
-        erro_Caractere.innerHTML = '';
+        let value = html_input.value;
+        html_erro_Caractere.innerHTML = '';
 
         if (event.which === 13) {
             if (caracteres(value) === value) {
@@ -82,7 +64,9 @@ function encontra_Letra(palavra_Sorteada) {
 
                 for (let i = 0; i < palavra_Sorteada.length; i++) {
 
-                    if (palavra_Sorteada[i].indexOf(input.value, palavra_Sorteada[i]) === 0) {
+                    if (palavra_Sorteada[i].indexOf(value, palavra_Sorteada[i]) === 0) {
+
+
                         console.log('existe na palavra');
                     } else {
                         console.log('nao existe na palavra');
@@ -94,20 +78,18 @@ function encontra_Letra(palavra_Sorteada) {
                 console.log('ELSE NAO IGUAL');
             };
             console.log('enter pressionado');
-            input.value = '';
+            html_input.value = '';
         }
 
         console.log(value);
     });
-
 }
-
 
 function caracteres(frase_teste) {
 
     if (!regex.test(frase_teste)) {
 
-        return erro_Caractere.innerHTML = "CARACTERES ESPECIAIS, LETRAS MINUSCULAS E NUMEROS NÃO SÃO PERIMITIDOS!"
+        return html_erro_Caractere.innerHTML = "CARACTERES ESPECIAIS, LETRAS MINUSCULAS E NUMEROS NÃO SÃO PERIMITIDOS!"
     }
 
     else {
@@ -119,9 +101,8 @@ function caracteres(frase_teste) {
 
 function exibe_Erro(letra_Errada) {
 
-    const erro = document.querySelector('.letras_Erradas');
 
-    erro.innerHTML = letra_Errada;
+    html_erro.innerHTML = letra_Errada;
 
 }
 
