@@ -17,6 +17,8 @@ rawFile.onload = function () {
 desenha_Area_Forca();
 
 function sorteia_Palavra() {
+    lista_Letras = [];
+    html_input.value = '';
 
     html_palavra_Sorteada.innerHTML = '';
     pos = Math.round(Math.random() * dados.length);
@@ -33,7 +35,7 @@ function mostra_Palavra_Dica() {
 
     html_categoria_Sorteada.innerHTML = "Dica: " + "[" + categoria_Sorteada + "] Com " + palavra_Sorteada.length + " Letras!";
 
-    // palavra_Sorteada.innerHTML = palavra;
+    html_palavra_Sorteada.innerHTML = "";
 
     for (let i = 0; i < palavra_Sorteada.length; i++) {
 
@@ -59,7 +61,7 @@ function recebe_Letra() {
         if (event.keyCode === 13) {
             if (caracteres(value) === value) {
                 verifica_Letra(value);
-
+                mostra_Palavra_Dica();
             }
             else {
                 console.log(caracteres(value));
@@ -67,7 +69,8 @@ function recebe_Letra() {
             }
 
             console.log('enter pressionado');
-            html_input.value = '';
+            event.preventDefault();
+            // html_input.value = "";
         }
     });
 }
