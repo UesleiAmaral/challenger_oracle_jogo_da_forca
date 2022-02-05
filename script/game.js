@@ -23,13 +23,12 @@ function sorteia_Palavra() {
     palavra_Sorteada = dados[pos].palavra.toUpperCase();
     categoria_Sorteada = dados[pos].categoria.toUpperCase();
 
-    encontra_Letra(palavra_Sorteada);
+    recebe_Letra(palavra_Sorteada);
     mostra_Palavra_Dica(palavra_Sorteada, categoria_Sorteada);
 
     console.log(palavra_Sorteada);
 
 }
-
 function mostra_Palavra_Dica() {
 
     html_categoria_Sorteada.innerHTML = "Dica: " + "[" + categoria_Sorteada + "] Com " + palavra_Sorteada.length + " Letras!";
@@ -50,69 +49,94 @@ function mostra_Palavra_Dica() {
     }
 
 }
-function encontra_Letra() {
+function recebe_Letra() {
 
-    html_input.addEventListener('keypress', (event) => {
-        // event.preventDefault();
+    html_input.addEventListener('keydown', (event) => {
+
         let value = html_input.value;
         html_erro_Caractere.innerHTML = '';
 
-        if (event.which === 13) {
+        if (event.keyCode === 13) {
             if (caracteres(value) === value) {
-                console.log('IF e IGUAL');
-                console.log(caracteres(value));
+                verifica_Letra(value);
 
-                for (let i = 0; i < palavra_Sorteada.length; i++) {
-
-                    if (palavra_Sorteada[i].indexOf(value, palavra_Sorteada[i]) === 0) {
-
-
-                        console.log('existe na palavra');
-                    } else {
-                        console.log('nao existe na palavra');
-
-                    }
-                }
-            } else {
+            }
+            else {
                 console.log(caracteres(value));
                 console.log('ELSE NAO IGUAL');
-            };
+            }
+
             console.log('enter pressionado');
             html_input.value = '';
         }
-
-        console.log(value);
     });
+}
+
+function verifica_Letra(value) {
+
+    if (value.length > 1) {
+        erro_Length-- //TOTAL DE ERRO ACEITO 1 MSG 0
+        html_erro_Caractere.innerHTML = 'digite apenas uma letra se persistir sera contado como erro!';
+        html_input.value = '';
+
+        if (erro_Length === 0) {
+            // compara_Desenho(chances);
+            html_erro_Caractere.innerHTML = 'erro contado!'
+        }
+    }
+    else {
+
+        for (let i = 0; i < palavra_Sorteada.length; i++) {
+            if (palavra_Sorteada[i].indexOf(value, palavra_Sorteada[i]) === 0) {
+
+                console.log('existe na palavra');
+                lista_Letras[i] = value;
+                console.log(lista_Letras);
+
+            } else {
+                chances--;
+                lista_Digitadas = value;
+                // compara_Desenho(chances);
+                console.log('nao existe na palavra');
+            }
+        }
+    }
 }
 
 function caracteres(frase_teste) {
 
     if (!regex.test(frase_teste)) {
 
-        return html_erro_Caractere.innerHTML = "CARACTERES ESPECIAIS, LETRAS MINUSCULAS E NUMEROS NÃO SÃO PERIMITIDOS!"
-    }
+        return html_erro_Caractere.innerHTML = "CARACTERES ESPECIAIS, LETRAS MINUSCULAS E NUMEROS NÃO SÃO PERIMITIDOS!";
 
-    else {
+    } else {
         return frase_teste;
 
     }
-
 }
 
-function exibe_Erro(letra_Errada) {
+function compara_Desenho() {
 
-
-    html_erro.innerHTML = letra_Errada;
+    if (chances == 6) {
+        desenha_Cabeca();
+    }
+    else if (chances == 5) {
+        desenha_Corpo();
+    }
+    else if (chances == 4) {
+        desenha_Braco_Direito();
+    }
+    else if (chances == 3) {
+        desenha_Braco_Esquerdo();
+    }
+    else if (chances == 2) {
+        desenha_Perna_Direita();
+    }
+    else if (chances == 1) {
+        desenha_Perna_Esquerda();
+    }
+    else {
+        desenha_Boneco_Completo();
+    }
 
 }
-
-
-
-/*
-[] CRIAR UMA FUNCAO EM QUE ENCONTRE SE FOI DIGITADO PALAVRA COM ESPACO ENTRE NA OPCAO DE INSERIR PALAVRAS NOVAS. ACEITAR APENAS 1 PALAVRA POR VEZ.
-
-[] CRIAR A LISTA DINAMICA
-
-[] COMPARAR A LISTA DINAMICA COM O INPUT DO USUARIO CRIAR FUNCAO/// VAI RECEBER E COMPARAR, OS VALORES DE LISTA DINAMICA E IMPUT
-
-*/
