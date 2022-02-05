@@ -4,7 +4,7 @@ O DESENHO ESTA EM " desenho.js " */
 // OBTENDO O ARQUIVO DE PALAVRAS
 let rawFile = new XMLHttpRequest();
 rawFile.overrideMimeType("application/json");
-rawFile.open("GET", '../palavras/lista_palavras.json', true);
+rawFile.open("GET", 'https://uesleiamaral.github.io/challenger_oracle_jogo_da_forca/palavras/lista_palavras.json', true);
 rawFile.send();
 rawFile.onload = function () {
 
