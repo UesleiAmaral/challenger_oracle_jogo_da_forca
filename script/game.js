@@ -13,23 +13,19 @@ rawFile.onload = function () {
 
     sorteia_Palavra(dados);
 }
-
+html_chances.innerHTML = "TENTATIVAS: " + "[ " + chances + " ]" ;
 desenha_Area_Forca();
 
 function sorteia_Palavra() {
-    lista_Letras = [];
-    html_input.value = '';
-
     html_palavra_Sorteada.innerHTML = '';
     pos = Math.round(Math.random() * dados.length);
     palavra_Sorteada = dados[pos].palavra.toUpperCase();
     categoria_Sorteada = dados[pos].categoria.toUpperCase();
 
-    recebe_Letra(palavra_Sorteada);
-    mostra_Palavra_Dica(palavra_Sorteada, categoria_Sorteada);
+    recebe_Letra();
+    mostra_Palavra_Dica();
 
     console.log(palavra_Sorteada);
-
 }
 function mostra_Palavra_Dica() {
 
@@ -42,100 +38,112 @@ function mostra_Palavra_Dica() {
         if (lista_Letras[i] === undefined) {
             lista_Letras[i] = "&nbsp;";
             html_palavra_Sorteada.innerHTML = html_palavra_Sorteada.innerHTML + "<div class='Letra_secreta'>" + lista_Letras[i] + "</div>"
-        }
 
-        else {
-
+        } else {
             html_palavra_Sorteada.innerHTML = html_palavra_Sorteada.innerHTML + "<div class='Letra_secreta'>" + lista_Letras[i] + "</div>"
         }
     }
-
 }
 function recebe_Letra() {
 
-    html_input.addEventListener('keydown', (event) => {
+    html_input.addEventListener('keyup', (event) => {
 
         let value = html_input.value;
-        html_erro_Caractere.innerHTML = '';
+        html_erro_Caractere.innerHTML = "";
+        console.log(value)
+        if (event.key === "Enter") {
+            verifica_Letra(value);
 
-        if (event.keyCode === 13) {
-            if (caracteres(value) === value) {
-                verifica_Letra(value);
+            if (regex.test(value) === true) {
+
                 mostra_Palavra_Dica();
-            }
-            else {
-                console.log(caracteres(value));
-                console.log('ELSE NAO IGUAL');
-            }
+            } else {
 
-            console.log('enter pressionado');
-            event.preventDefault();
-            // html_input.value = "";
+                html_erro_Caractere.innerHTML = "CARACTERES ESPECIAIS, LETRAS MINUSCULAS E NUMEROS NÃO SÃO PERIMITIDOS!";
+            }
+            html_input.value = "";
         }
+
     });
 }
 
 function verifica_Letra(value) {
 
-    if (value.length > 1) {
-        erro_Length-- //TOTAL DE ERRO ACEITO 1 MSG 0
-        html_erro_Caractere.innerHTML = 'digite apenas uma letra se persistir sera contado como erro!';
-        html_input.value = '';
+    let vitoria = true;
 
-        if (erro_Length === 0) {
-            // compara_Desenho(chances);
-            html_erro_Caractere.innerHTML = 'erro contado!'
-        }
-    }
-    else {
 
-        for (let i = 0; i < palavra_Sorteada.length; i++) {
-            if (palavra_Sorteada[i].indexOf(value, palavra_Sorteada[i]) === 0) {
+    if (chances > 1) {
 
-                console.log('existe na palavra');
-                lista_Letras[i] = value;
-                console.log(lista_Letras);
+        if (value.length > 1) {
+            erro_Length-- //TOTAL DE ERRO ACEITO 1 MSG 0
+            html_erro_Caractere.innerHTML = 'digite apenas uma letra se persistir sera contado como erro!';
+            html_input.value = '';
 
-            } else {
+            if (erro_Length === 0) {
                 chances--;
-                lista_Digitadas = value;
-                // compara_Desenho(chances);
-                console.log('nao existe na palavra');
+                compara_Desenho();
+                html_chances.innerHTML = "TENTATIVAS: " + chances;
+                html_erro_Caractere.innerHTML = 'erro contado!'
+
+            }
+        }
+        else if (palavra_Sorteada.indexOf(value, palavra_Sorteada) < 0) {
+            chances--;
+            compara_Desenho();
+            html_chances.innerHTML = "TENTATIVAS: " + chances;
+            lista_Digitadas += " " + value;
+            html_Exibe_letras.innerHTML = lista_Digitadas;
+
+        }
+        else {
+
+            for (let i = 0; i < palavra_Sorteada.length; i++) {
+                if (palavra_Sorteada[i].indexOf(value, palavra_Sorteada[i]) === 0) {
+                    lista_Letras[i] = value;
+
+                }
+                if (palavra_Sorteada[i] != lista_Letras[i]) {
+                    vitoria = false;
+
+                }
+            }
+
+            if (vitoria === true) {
+                html_msg.innerHTML = "VENCEU";
+                // html_input = Disable;
+
             }
         }
     }
-}
+    
 
-function caracteres(frase_teste) {
-
-    if (!regex.test(frase_teste)) {
-
-        return html_erro_Caractere.innerHTML = "CARACTERES ESPECIAIS, LETRAS MINUSCULAS E NUMEROS NÃO SÃO PERIMITIDOS!";
-
-    } else {
-        return frase_teste;
-
+    else {
+        chances = 0;
+        html_chances.innerHTML = "TENTATIVAS: " + chances;
+        compara_Desenho();
+        html_msg.innerHTML = "PERDEU";
     }
+
 }
 
 function compara_Desenho() {
 
-    if (chances == 6) {
+    if (chances == 5) {
         desenha_Cabeca();
     }
-    else if (chances == 5) {
+    else if (chances == 4) {
         desenha_Corpo();
     }
-    else if (chances == 4) {
+    else if (chances == 3) {
         desenha_Braco_Direito();
     }
-    else if (chances == 3) {
+    else if (chances == 2) {
         desenha_Braco_Esquerdo();
     }
-    else if (chances == 2) {
+    else if (chances == 1) {
         desenha_Perna_Direita();
     }
-    else if (chances == 1) {
+    else if (chances == 0) {
         desenha_Perna_Esquerda();
     }
     else {

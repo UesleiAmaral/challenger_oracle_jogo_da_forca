@@ -13,12 +13,13 @@
 
     <main class="container">
         <header>
-            <button class="btn_header" id="jogar" onclick="sorteia_Palavra()">JOGAR</button>
-            <button class="btn_header" onclick="sorteia_Palavra()">NOVA PALAVRAS</button>
+            <button class="btn_header" id="jogar">JOGAR</button>
+            <button class="btn_header" onclick="sorteia_Palavra()">ADCIONE NOVA PALAVRA</button>
             <button class="btn_header">SAIR</button>
         </header>
-        <h1 class="msg">GANHOU/PERDEU</h1>
-        <p class="Msg_Erro"></p>
+        <h1 class="msg">JOGO DA FORCA!</h1>
+        <p class="Msg_Letra_digitadas"></p>
+        <P class="mostra_Chances"></P>
         <canvas class="canvas">
         </canvas>
 
@@ -27,7 +28,7 @@
         </div>
 
         <div class="input_Letra">
-            <input type="text" name="letra_Digitada" id="letra_Digitada" placeholder="Digite Uma Letra!">
+            <input type="text" name="letra_Digitada" id="letra_Digitada" placeholder="Digite Uma Letra!" autocomplete="off">
             <!-- <input type="button" value="Enviar Resposta!"> -->
             <P class="erro_Caractere"></P>
         </div>
@@ -58,11 +59,14 @@
         </div>
     </main>
 
-    <script type="text/javascript" src="https://uesleiamaral.github.io/challenger_oracle_jogo_da_forca/script/var.js"></script>
+    <script type="text/javascript" src="./script/var.js"></script>
     <script type="text/javascript" src="https://uesleiamaral.github.io/challenger_oracle_jogo_da_forca/palavras/lista_palavras.json"></script>
     <script type="text/javascript" src="https://uesleiamaral.github.io/challenger_oracle_jogo_da_forca/script/desenho.js"></script>
-    <script type="text/javascript" src="https://uesleiamaral.github.io/challenger_oracle_jogo_da_forca/script/game.js"></script>
+    <script type="text/javascript" src="./script/game.js"></script>
 
 </body>
 
 </html>
+
+<!-- https://uesleiamaral.github.io/challenger_oracle_jogo_da_forca/script/var.js -->
+<!-- https://uesleiamaral.github.io/challenger_oracle_jogo_da_forca/script/game.js -->
