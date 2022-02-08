@@ -14,8 +14,6 @@ rawFile.onload = function () {
     sorteia_Palavra(dados);
 }
 html_chances.innerHTML = "TENTATIVAS: " + "[ " + chances + " ]" ;
-desenha_Area_Forca();
-
 function sorteia_Palavra() {
     html_palavra_Sorteada.innerHTML = '';
     pos = Math.round(Math.random() * dados.length);
@@ -27,6 +25,8 @@ function sorteia_Palavra() {
 
     console.log(palavra_Sorteada);
 }
+
+desenha_Area_Forca();
 function mostra_Palavra_Dica() {
 
     html_categoria_Sorteada.innerHTML = "Dica: " + "[" + categoria_Sorteada + "] Com " + palavra_Sorteada.length + " Letras!";

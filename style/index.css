@@ -10,49 +10,42 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: blueviolet; */
 }
+
+h1 {
+    margin: 0 auto;
+}
+
 main .canvas{
     
-    width: 300px;
-    height: 220px;
+    width: 400px;
+    height: 320px;
     background-color: transparent;
+    /* border: 1px solid black; */
 }
+
 .palavra_secreta{
     display: flex;
     flex-wrap: wrap;
-    /* width: 34%; */
-    /* align-items: star; */
-    /* background-color: lightpink; */
-    
-    
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
 }
+
 .Letra_secreta{
-    width: 10%;
+    width: 30px;
     font-size: 20px;
-    /* width: 100%; */
-    /* text-decoration: underline; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-bottom: 3px solid black;
     margin:10px;
-    background-color: rgb(255, 255, 255);
-}
-
-.letra_espaco{
-        width: 10%;
-    font-size: 20px;
-    border-bottom: 3px solid black;
-    margin:10px;
-    background-color: rgb(255, 255, 255);
-
-    border:none;
 }
 
 .button{
     width: 40px;
-    display: none;
-}
-
-.button_none {
     display: none;
 }
 
