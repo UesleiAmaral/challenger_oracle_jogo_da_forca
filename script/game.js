@@ -26,7 +26,8 @@ function sorteia_Palavra() {
     console.log(palavra_Sorteada);
 }
 
-desenha_Area_Forca();
+// desenha_Area_Forca();
+
 function mostra_Palavra_Dica() {
 
     html_categoria_Sorteada.innerHTML = "Dica: " + "[" + categoria_Sorteada + "] Com " + palavra_Sorteada.length + " Letras!";
@@ -150,4 +151,193 @@ function compara_Desenho() {
         desenha_Boneco_Completo();
     }
 
+}
+
+
+
+
+// LINHA DE BAIXO
+pincel.beginPath();
+pincel.moveTo(260, 100);
+pincel.lineWidth = 2;
+pincel.lineCap = 'round';
+pincel.strokeStyle = "	#CD853F";
+
+pincel.lineTo(40, 100);
+pincel.stroke();
+
+pincel.beginPath();
+pincel.moveTo(180, 10);
+pincel.lineWidth = 2;
+pincel.lineCap = 'round';
+pincel.lineTo(100, 10);
+pincel.stroke();
+
+
+
+pincel.beginPath();
+pincel.moveTo(140, 10);
+pincel.lineWidth = 2;
+pincel.lineCap = 'round';
+pincel.lineTo(110, 30);
+pincel.stroke();
+
+// desenha_Area_Forca();
+//  CORDA
+let lineTo = 175;
+function corda() {
+    pincel.beginPath();
+    pincel.moveTo(170, 10);
+    pincel.lineWidth = 2;
+    pincel.lineCap = 'round';
+    pincel.lineTo(lineTo, 20);
+    pincel.stroke();
+
+
+    // clear_Canvas();
+}
+function balanca_corda() {
+    clear_Canvas();
+    corda();
+    if (lineTo === 175) {
+        lineTo -= 10;
+    }  else if (lineTo === 165) {
+        lineTo += 10;
+    }
+    
+}
+
+// desenha_Cabeca();
+// corda();
+
+setInterval(balanca_corda,800 );
+
+// RETANGULO
+pincel.beginPath();
+pincel.fillStyle = "	#CD853F";
+
+pincel.rect(10, 134, 280, 10);
+pincel.lineWidth = 2;
+pincel.stroke();
+
+// LINHA LATERAL PISO DIREITA
+pincel.beginPath();
+pincel.moveTo(290, 134);
+pincel.lineWidth = 2;
+pincel.lineCap = 'round';
+pincel.lineTo(260, 100);
+pincel.stroke();
+
+
+
+// LINHA LATERAL PISO ESQUERA
+pincel.beginPath();
+pincel.moveTo(10, 134);
+pincel.lineWidth = 2;
+pincel.lineCap = 'round';
+pincel.lineTo(40, 100);
+pincel.stroke();
+
+// LINHAS DO PISO
+pincel.beginPath();
+pincel.moveTo(30, 134);
+pincel.lineWidth = 2;
+pincel.lineCap = 'round';
+pincel.lineTo(60, 100);
+pincel.stroke();
+
+pincel.beginPath();
+pincel.moveTo(50, 134);
+pincel.lineWidth = 2;
+pincel.lineCap = 'round';
+pincel.lineTo(76, 100);
+pincel.stroke();
+
+pincel.beginPath();
+pincel.moveTo(70, 134);
+pincel.lineWidth = 2;
+pincel.lineCap = 'round';
+pincel.lineTo(90, 100);
+pincel.stroke();
+
+pincel.beginPath();
+pincel.moveTo(90, 134);
+pincel.lineWidth = 2;
+pincel.lineCap = 'round';
+pincel.lineTo(106, 100);
+pincel.stroke();
+
+pincel.beginPath();
+pincel.moveTo(106, 134);
+pincel.lineWidth = 2;
+pincel.lineCap = 'round';
+pincel.lineTo(120, 100);
+pincel.stroke();
+
+pincel.beginPath();
+pincel.moveTo(126, 134);
+pincel.lineWidth = 2;
+pincel.lineCap = 'round';
+pincel.lineTo(136, 100);
+pincel.stroke();
+
+pincel.beginPath();
+pincel.moveTo(150, 134);
+pincel.lineWidth = 2;
+pincel.lineCap = 'round';
+pincel.lineTo(160, 100);
+pincel.stroke();
+
+pincel.beginPath();
+pincel.moveTo(170, 134);
+pincel.lineWidth = 2;
+pincel.lineCap = 'round';
+pincel.lineTo(180, 100);
+pincel.stroke();
+
+pincel.beginPath();
+pincel.moveTo(190, 134);
+pincel.lineWidth = 2;
+pincel.lineCap = 'round';
+pincel.lineTo(200, 100);
+pincel.stroke();
+
+pincel.beginPath();
+pincel.moveTo(210, 134);
+pincel.lineWidth = 2;
+pincel.lineCap = 'round';
+pincel.lineTo(220, 100);
+pincel.stroke();
+
+pincel.beginPath();
+pincel.moveTo(230, 134);
+pincel.lineWidth = 2;
+pincel.lineCap = 'round';
+pincel.lineTo(240, 100);
+pincel.stroke();
+
+pincel.beginPath();
+pincel.moveTo(250, 134);
+pincel.lineWidth = 2;
+pincel.lineCap = 'round';
+pincel.lineTo(260, 100);
+pincel.stroke();
+
+pincel.beginPath();
+pincel.moveTo(270, 134);
+pincel.lineWidth = 2;
+pincel.lineCap = 'round';
+pincel.lineTo(274, 116);
+pincel.stroke();
+
+//AREA FORCA
+
+pincel.beginPath();
+pincel.fillStyle = "	#CD853F";
+pincel.fillRect(100, 10, 10, 110);
+pincel.lineWidth = 2;
+pincel.stroke();
+
+function clear_Canvas() {
+    pincel.clearRect(160, 11, 21,10);
 }

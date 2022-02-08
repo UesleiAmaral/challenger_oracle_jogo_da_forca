@@ -153,9 +153,6 @@ function desenha_Area_Forca() {
     pincel.lineTo(40, 100);
     pincel.stroke();
 
-
-
-
     // LINHAS DO PISO
     pincel.beginPath();
     pincel.moveTo(30, 134);
@@ -163,8 +160,6 @@ function desenha_Area_Forca() {
     pincel.lineCap = 'round';
     pincel.lineTo(60, 100);
     pincel.stroke();
-
-
 
     pincel.beginPath();
     pincel.moveTo(50, 134);
@@ -340,19 +335,3 @@ function desenha_Perna_Direita() {
 
 }
 
-
-
-
-/*    for (let i = 0; i < palavra.length; i++) {
-        
-        if (lista_Letras[i] === undefined) {
-            lista_Letras[i] = "&nbsp;";
-            palavra_Sorteada.innerHTML = palavra_Sorteada.innerHTML + "<div class='Letra_secreta'>"+lista_Letras[i]+"</div>"
-        }
-        
-        else {
-            
-            palavra_Sorteada.innerHTML = palavra_Sorteada.innerHTML + "<div class='Letra_secreta'>"+lista_Letras[i]+"</div>"
-        }
-    }
- */
