@@ -93,8 +93,8 @@ function verifica_Letra(value) {
             chances--;
             compara_Desenho();
             html_chances.innerHTML = "TENTATIVAS: " + chances;
-            lista_Digitadas += " " + value;
-            html_Exibe_letras.innerHTML = "[ LETRAS DIGITADAS: " + lista_Digitadas + " ]";
+            lista_Digitadas += " [ " + value + " ] ";
+            html_Exibe_letras.innerHTML = "LETRAS DIGITADAS: " + lista_Digitadas;
 
         }
         else {
@@ -155,9 +155,3 @@ function compara_Desenho() {
 }
 
 desenha_Area_Forca();
-desenha_Cabeca();
-desenha_Corpo();
-desenha_Braco_Direito();
-desenha_Braco_Esquerdo();
-desenha_Perna_Direita();
-desenha_Perna_Esquerda();

@@ -16,18 +16,26 @@
         <div class="flip" id="flip">
 
             <div class="front">
-                <h1 class="msg">JOGO DA FORCA!</h1>
+                <div id="text"></div>
+                <canvas class="canvas_front"id="canvas_front">
+                </canvas>
+                <p class="visible">Aperte ENTER Para Inserir a Palavra!</p>
+                <textarea name="text_novaPalavra" id="nova_palavra" class="visible" ></textarea>
 
-                <button class="btn_header" id="jogar">JOGAR</button>
-                <button class="btn_header" onclick="sorteia_Palavra()">ADCIONE NOVA PALAVRA</button>
-                <button class="btn_header">SAIR</button>
+                <button class="btn_header jogar" id="btn_front" onclick>JOGAR</button>
+                <button class="btn_header" id="btn_front" onclick="sorteia_Palavra()">ADCIONE NOVA PALAVRA</button>
+                
             </div>
 
-
-
             <div class="game">
+
+               
+
+                
                 <p class="msg_Perdeu"></p>
-                <p class="Msg_Letra_digitadas">[ LETRAS DIGITADAS: ]</p>
+                <div class="Msg_Letra_digitadas">LETRAS DIGITADAS
+
+                </div>
                 <P class="mostra_Chances"></P>
                 <canvas class="canvas">
                 </canvas>
@@ -36,12 +44,13 @@
                 <div class="palavra_secreta">
                     <!-- <div class="Letra_secreta"></div> -->
                 </div>
-
+                
 
                 <input type="text" name="letra_Digitada" id="letra_Digitada" placeholder="Digite Uma Letra!"
                     autocomplete="off">
-                <!-- <input type="button" value="Enviar Resposta!"> -->
-                <P class="erro_Caractere"></P>
+                    <!-- <input type="button" value="Enviar Resposta!"> -->
+                    <button class="btn_header sair">SAIR</button>
+                    <P class="erro_Caractere"></P>
 
 
                 <div class="botoesLetras">
@@ -75,6 +84,8 @@
         src="https://uesleiamaral.github.io/challenger_oracle_jogo_da_forca/palavras/lista_palavras.json"></script>
     <script type="text/javascript" src="./script/desenho.js"></script>
     <script type="text/javascript" src="./script/game.js"></script>
+    <script type="text/javascript" src="./script/anima.js"></script>
+    <script type="text/javascript" src="./script/canvas_front.js"></script>
 
 </body>
 

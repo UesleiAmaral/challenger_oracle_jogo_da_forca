@@ -95,13 +95,13 @@ function desenha_Area_Forca() {
 
     // PILAR LATERAL
     pincel.beginPath();
-    pincel.fillStyle = "#bf7a02";
+    pincel.fillStyle = "#dedede";
     pincel.fillRect(40, 10, 10, 90);
     pincel.lineWidth = 2;
     pincel.stroke();
     // PILAR LATERAL
     pincel.beginPath();
-    pincel.fillStyle = "#bf7a02";
+    pincel.fillStyle = "#dedede";
     pincel.fillRect(250, 10, 10, 90);
     pincel.lineWidth = 2;
     pincel.stroke();
@@ -119,7 +119,7 @@ function desenha_Area_Forca() {
     pincel.moveTo(260, 100);
     pincel.lineWidth = 2;
     pincel.lineCap = 'round';
-    pincel.strokeStyle = "#bf7a02";
+    pincel.strokeStyle = "#dedede";
     
     pincel.lineTo(40, 100);
     pincel.stroke();
@@ -127,7 +127,7 @@ function desenha_Area_Forca() {
     pincel.beginPath();
     pincel.moveTo(180, 10);
     pincel.lineWidth = 2;
-    pincel.strokeStyle = "#e0ad53";
+    pincel.strokeStyle = "#dedede";
     pincel.lineCap = 'round';
     pincel.lineTo(100, 10);
     pincel.stroke();
@@ -139,7 +139,7 @@ function desenha_Area_Forca() {
     pincel.beginPath();
     pincel.moveTo(140, 10);
     pincel.lineWidth = 2;
-    pincel.strokeStyle = "#e0ad53";
+    pincel.strokeStyle = "#dedede";
     pincel.lineCap = 'round';
     pincel.lineTo(110, 30);
     pincel.stroke();
@@ -148,7 +148,7 @@ function desenha_Area_Forca() {
     pincel.beginPath();
     pincel.moveTo(170, 10);
     pincel.lineWidth = 1;
-    pincel.strokeStyle = "#e0ad53";
+    pincel.strokeStyle = "#dedede";
     pincel.lineCap = 'round';
     pincel.lineTo(170, 20);
     pincel.stroke();
@@ -161,8 +161,8 @@ function desenha_Area_Forca() {
 
     // RETANGULO
     pincel.beginPath();
-    // pincel.fillStyle = "#bf7a02";
-    pincel.strokeStyle = "#bf7a02";
+    // pincel.fillStyle = "#dedede";
+    pincel.strokeStyle = "#dedede";
     pincel.fillRect(10, 134, 280, 10);
     pincel.lineWidth = 2;
     pincel.stroke();
@@ -279,7 +279,7 @@ function desenha_Area_Forca() {
 
     //AREA FORCA
     pincel.beginPath();
-    pincel.fillStyle = "#e0ad53";
+    pincel.fillStyle = "#dedede";
     pincel.fillRect(100, 10, 10, 110);
     pincel.lineWidth = 2;
     pincel.stroke();
@@ -288,13 +288,13 @@ function desenha_Area_Forca() {
 
     // PILAR LATERAL
     pincel.beginPath();
-    pincel.fillStyle = "#bf7a02";
+    pincel.fillStyle = "#dedede";
     pincel.fillRect(9, 44, 10, 101);
     pincel.lineWidth = 2;
     pincel.stroke();
     // PILAR LATERAL
     pincel.beginPath();
-    pincel.fillStyle = "#bf7a02";
+    pincel.fillStyle = "#dedede";
     pincel.fillRect(281, 44, 10, 101);
     pincel.lineWidth = 2;
     pincel.stroke();
@@ -305,7 +305,7 @@ function desenha_Cabeca() {
 
     // CABEÇA
     pincel.beginPath();
-    pincel.strokeStyle = "#ffffff";
+    pincel.strokeStyle = "#dedede";
     pincel.arc(170, 30, 10, 0, 2 * Math.PI);
     pincel.lineWidth = 2;
     pincel.stroke();

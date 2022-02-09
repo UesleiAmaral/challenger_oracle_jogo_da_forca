@@ -1,3 +1,6 @@
+const canvas_Front = document.querySelector(".canvas_front");
+const pincel_Front = canvas_Front.getContext('2d');
+
 const canvas = document.querySelector('.canvas');// CANVAS
 const pincel = canvas.getContext('2d');// PINCEL DO CANVAS
 const regex = new RegExp("^[A-Z]"); // LETRAS PERMITIDAS
