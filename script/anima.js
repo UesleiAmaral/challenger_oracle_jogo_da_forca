@@ -1,5 +1,5 @@
 
-var string = "Jogo Da Forca!"; /* type your text here */
+var string = "Jogo Da Forca!"; 
 var array = string.split("");
 var timer;
 
@@ -9,6 +9,6 @@ function frameLooper() {
     } else {
         clearTimeout(timer);
     }
-    loopTimer = setTimeout('frameLooper()', 200); /* change 70 for speed */
+    loopTimer = setTimeout('frameLooper()', 200); 
 }
 frameLooper();

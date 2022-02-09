@@ -10,15 +10,6 @@ pincel_Front.fillStyle = "#dedede";
 pincel_Front.fillRect(250, 10, 10, 90);
 pincel_Front.lineWidth = 2;
 pincel_Front.stroke();
-
-// // PILAR LATERAL
-// pincel_Front.beginPath();
-// pincel_Front.fillStyle = "#f5cc87";
-// pincel_Front.fillRect(40, 10, 220, 7);
-// pincel_Front.lineWidth = 2;
-// pincel_Front.stroke();
-
-
 // LINHA DE TRAS
 pincel_Front.beginPath();
 pincel_Front.moveTo(260, 100);
@@ -36,9 +27,6 @@ pincel_Front.strokeStyle = "#dedede"
 pincel_Front.lineCap = 'round';
 pincel_Front.lineTo(100, 10);
 pincel_Front.stroke();
-
-
-
 
 // 
 pincel_Front.beginPath();
