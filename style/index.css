@@ -15,16 +15,29 @@ body{
 .container{
     width: 100%;
     height: 100vh;
+    perspective: 1000;
+}
+.container, .flip{
+}
+#flip{
+    transition: all 1s;
+    transform-style: preserve-3d;
+}
+.flip{
+    transform: rotateY(180deg);
 }
 
 .front {
-    width: 60%;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transform: rotateY();
+    /* background-color: aqua; */
+    transform: rotateY(180deg);
+    position: absolute;
+    backface-visibility: hidden;
 
 }
 .msg_Perdeu{
@@ -38,26 +51,29 @@ body{
     font-size: 2rem;
     color: rgb(72, 228, 0);
     background-color: rgb(0, 5, 5);
-    position:relative;
 
 }
+
 .Msg_Letra_digitadas{
     margin: 50%;
 }
 
 .game {
-    width: 60%;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* background-color: chartreuse; */
     background-image: url(../Crianças-Ilustração-Lousa-PNG-1024x766.png);
     background-repeat: no-repeat;
     background-size: cover 10;
     background-position: center;
     background-position-x: 40%;
-    min-width: 100%;
+    min-width: 90%;
+    position: absolute;
+    backface-visibility: hidden;
 
 }
 .Msg_Letra_digitadas{

@@ -59,7 +59,7 @@ function recebe_Letra() {
 
                 mostra_Palavra_Dica();
             } else {
-
+                alert('CARACTERES NAO PERMITIDOS@')
                 // html_msg.classList.toggle("msg_Ganhou");
                 html_msg.innerHTML = "CARACTERES ESPECIAIS, LETRAS MINUSCULAS E NUMEROS NÃO SÃO PERIMITIDOS!";
             }
@@ -94,7 +94,7 @@ function verifica_Letra(value) {
             compara_Desenho();
             html_chances.innerHTML = "TENTATIVAS: " + chances;
             lista_Digitadas += " " + value;
-            html_Exibe_letras.innerHTML =  "[ LETRAS DIGITADAS: " +  lista_Digitadas + " ]" ;
+            html_Exibe_letras.innerHTML = "[ LETRAS DIGITADAS: " + lista_Digitadas + " ]";
 
         }
         else {
