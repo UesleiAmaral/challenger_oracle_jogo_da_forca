@@ -8,7 +8,7 @@ const html_palavra_Sorteada = document.querySelector('.palavra_secreta');
 const html_categoria_Sorteada = document.querySelector('.container_line_categoria');
 const html_input = document.querySelector('#letra_Digitada');
 const html_chances = document.querySelector('.mostra_Chances');
-const html_msg = document.querySelector(".msg");
+const html_msg = document.querySelector(".msg_Perdeu");
 const html_Exibe_letras = document.querySelector(".Msg_Letra_digitadas");
 
 

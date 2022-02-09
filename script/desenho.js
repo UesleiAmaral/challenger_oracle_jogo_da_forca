@@ -93,48 +93,80 @@ function desenha_Boneco_Completo() {
 function desenha_Area_Forca() {
 
 
+    // PILAR LATERAL
+    pincel.beginPath();
+    pincel.fillStyle = "#bf7a02";
+    pincel.fillRect(40, 10, 10, 90);
+    pincel.lineWidth = 2;
+    pincel.stroke();
+    // PILAR LATERAL
+    pincel.beginPath();
+    pincel.fillStyle = "#bf7a02";
+    pincel.fillRect(250, 10, 10, 90);
+    pincel.lineWidth = 2;
+    pincel.stroke();
 
-    // LINHA DE BAIXO
+    // // PILAR LATERAL
+    // pincel.beginPath();
+    // pincel.fillStyle = "#f5cc87";
+    // pincel.fillRect(40, 10, 220, 7);
+    // pincel.lineWidth = 2;
+    // pincel.stroke();
+
+
+    // LINHA DE TRAS
     pincel.beginPath();
     pincel.moveTo(260, 100);
     pincel.lineWidth = 2;
     pincel.lineCap = 'round';
-    pincel.strokeStyle = "	#CD853F";
-
+    pincel.strokeStyle = "#bf7a02";
+    
     pincel.lineTo(40, 100);
     pincel.stroke();
-
+    
     pincel.beginPath();
     pincel.moveTo(180, 10);
     pincel.lineWidth = 2;
+    pincel.strokeStyle = "#e0ad53";
     pincel.lineCap = 'round';
     pincel.lineTo(100, 10);
     pincel.stroke();
-
-
-
+    
+    
+    
+    
+    // 
     pincel.beginPath();
     pincel.moveTo(140, 10);
     pincel.lineWidth = 2;
+    pincel.strokeStyle = "#e0ad53";
     pincel.lineCap = 'round';
     pincel.lineTo(110, 30);
     pincel.stroke();
-
+    
+    // AREA DA CORDA
     pincel.beginPath();
     pincel.moveTo(170, 10);
-    pincel.lineWidth = 2;
+    pincel.lineWidth = 1;
+    pincel.strokeStyle = "#e0ad53";
     pincel.lineCap = 'round';
     pincel.lineTo(170, 20);
     pincel.stroke();
+    
+    // pincel.beginPath();
+    // pincel.strokeStyle = "#5c5858";
+    // pincel.arc(170, 26, 6, 0, 2 * Math.PI);
+    // pincel.lineWidth = 1;
+    // pincel.stroke();
 
     // RETANGULO
     pincel.beginPath();
-    pincel.fillStyle = "	#CD853F";
-
-    pincel.rect(10, 134, 280, 10);
+    // pincel.fillStyle = "#bf7a02";
+    pincel.strokeStyle = "#bf7a02";
+    pincel.fillRect(10, 134, 280, 10);
     pincel.lineWidth = 2;
     pincel.stroke();
-
+    
     // LINHA LATERAL PISO DIREITA
     pincel.beginPath();
     pincel.moveTo(290, 134);
@@ -246,10 +278,24 @@ function desenha_Area_Forca() {
     pincel.stroke();
 
     //AREA FORCA
-
     pincel.beginPath();
-    pincel.fillStyle = "	#CD853F";
+    pincel.fillStyle = "#e0ad53";
     pincel.fillRect(100, 10, 10, 110);
+    pincel.lineWidth = 2;
+    pincel.stroke();
+
+
+
+    // PILAR LATERAL
+    pincel.beginPath();
+    pincel.fillStyle = "#bf7a02";
+    pincel.fillRect(9, 44, 10, 101);
+    pincel.lineWidth = 2;
+    pincel.stroke();
+    // PILAR LATERAL
+    pincel.beginPath();
+    pincel.fillStyle = "#bf7a02";
+    pincel.fillRect(281, 44, 10, 101);
     pincel.lineWidth = 2;
     pincel.stroke();
 
@@ -259,9 +305,9 @@ function desenha_Cabeca() {
 
     // CABEÇA
     pincel.beginPath();
-    pincel.strokeStyle = "#000000";
+    pincel.strokeStyle = "#ffffff";
     pincel.arc(170, 30, 10, 0, 2 * Math.PI);
-    pincel.lineWidth = 1.5;
+    pincel.lineWidth = 2;
     pincel.stroke();
 
 }
@@ -271,10 +317,10 @@ function desenha_Corpo() {
     // CORPO
     pincel.beginPath();
     // INICIO DO CORPO
-    pincel.moveTo(160, 40);
-    pincel.lineWidth = 3;
+    pincel.moveTo(170, 40);
+    pincel.lineWidth = 2;
     // FIM DO CORPO
-    pincel.lineTo(160, 80);
+    pincel.lineTo(170, 70);
     pincel.stroke();
 
 }
@@ -284,7 +330,7 @@ function desenha_Braco_Direito() {
     // BRAÇOS DIREITO
     pincel.beginPath();
     // INICIO DO BRACO DIREITO
-    pincel.moveTo(160, 40);
+    pincel.moveTo(170, 40);
     pincel.lineWidth = 2;
     pincel.lineCap = 'round';
     // FIM DO BRACO DIREITO
@@ -298,11 +344,11 @@ function desenha_Braco_Esquerdo() {
     // BRAÇOS ESQUERDO
     pincel.beginPath();
     // INICIO DO BRACO ESQUERDO
-    pincel.moveTo(160, 40);
+    pincel.moveTo(170, 40);
     pincel.lineWidth = 2;
     pincel.lineCap = 'round';
     // FIM DO BRACO ESQUERDO
-    pincel.lineTo(140, 60);
+    pincel.lineTo(160, 60);
     pincel.stroke();
 
 }
@@ -312,11 +358,11 @@ function desenha_Perna_Esquerda() {
     // PERNA DIREITA
     pincel.beginPath();
     // INICIO DA PERNA DIREITA
-    pincel.moveTo(160, 80);
+    pincel.moveTo(170, 70);
     pincel.lineWidth = 2;
     pincel.lineCap = 'round';
     // FIM DO BRACO ESQUERDO
-    pincel.lineTo(140, 100);
+    pincel.lineTo(160, 90);
     pincel.stroke();
 
 }
@@ -326,11 +372,11 @@ function desenha_Perna_Direita() {
     // PERNA DIREITA
     pincel.beginPath();
     // INICIO DA PERNA DIREITA
-    pincel.moveTo(160, 80);
+    pincel.moveTo(170, 70);
     pincel.lineWidth = 2;
     pincel.lineCap = 'round';
     // FIM DO BRACO ESQUERDO
-    pincel.lineTo(180, 100);
+    pincel.lineTo(180, 90);
     pincel.stroke();
 
 }
