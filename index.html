@@ -10,82 +10,91 @@
 </head>
 
 <body>
-
     <main class="container">
-
-        <div class="flip" id="flip">
-
+        <div class="" id="flip">
             <div class="front">
                 <div id="text"></div>
-                <canvas class="canvas_front"id="canvas_front">
+                <canvas class="canvas_front" id="canvas_front">
                 </canvas>
-                <p class="visible">Aperte ENTER Para Inserir a Palavra!</p>
-                <textarea name="text_novaPalavra" id="nova_palavra" class="visible" ></textarea>
+                <p class="msg_escolha">
+                    Aperte ENTER Para Inserir a Palavra!
+                </p>
 
-                <button class="btn_header jogar" id="btn_front" onclick>JOGAR</button>
+                <div class="opcoes">
+                    <p class="msg_escolha">
+                        Escolha UMA Categoria
+                    </p>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="scales" name="scales">
+                        <label for="scales">[ Nome ]</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="scales" name="scales">
+                        <label for="scales">[ Objeto ]</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="scales" name="scales">
+                        <label for="scales">[ Lugar ]</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="scales" name="scales">
+                        <label for="scales">[ Animal ]</label>
+                    </div>
+                    <textarea name="text_novaPalavra" id="nova_palavra" class="visible">
+                    </textarea>
+                </div>
+
+                <button class="btn_jogar" id="btn_front" onclick>JOGAR</button>
                 <button class="btn_header" id="btn_front" onclick="sorteia_Palavra()">ADCIONE NOVA PALAVRA</button>
-                
             </div>
 
             <div class="game">
-
-               
-
-                
                 <p class="msg_Perdeu"></p>
-                <div class="Msg_Letra_digitadas">LETRAS DIGITADAS
-
-                </div>
+                <p class="letras">LETRAS DIGITADAS</P>
+                <div class="Msg_Letra_digitadas"></div>
                 <P class="mostra_Chances"></P>
-                <canvas class="canvas">
-                </canvas>
+                <canvas class="canvas"></canvas>
                 <p class="container_line_categoria"></p>
+                <div class="palavra_secreta"></div>
 
-                <div class="palavra_secreta">
-                    <!-- <div class="Letra_secreta"></div> -->
+                <div class="input">
+                    <input type="text" name="letra_Digitada" id="letra_Digitada" placeholder="Digite Uma Letra!" autocomplete="off">
+                    <button class="btn_game home">HOME</button>
                 </div>
                 
-
-                <input type="text" name="letra_Digitada" id="letra_Digitada" placeholder="Digite Uma Letra!"
-                    autocomplete="off">
-                    <!-- <input type="button" value="Enviar Resposta!"> -->
-                    <button class="btn_header sair">HOME</button>
-                    <P class="erro_Caractere"></P>
-
-
-                <div class="botoesLetras">
-                    <button class="button " id="letra_A">A</button>
-                    <button class="button ">B</button>
-                    <button class="button ">C</button>
-                    <button class="button ">D</button>
-                    <button class="button ">E</button>
-                    <button class="button ">F</button>
-                    <button class="button ">G</button>
-                    <button class="button ">H</button>
-                    <button class="button ">I</button>
-                    <button class="button ">J</button>
-                    <button class="button ">K</button>
-                    <button class="button ">L</button>
-                    <button class="button ">M</button>
-                    <button class="button ">N</button>
-                    <button class="button ">O</button>
-                    <button class="button ">P</button>
-                    <button class="button ">Q</button>
-                    <button class="button ">R</button>
-                </div>
-
+                <P class="erro_Caractere"></P>
             </div>
         </div>
     </main>
 
-    <script type="text/javascript" src="./script/testcard.js"></script>
-    <script type="text/javascript" src="./script/var.js"></script>
+    <script type="text/javascript" src="./script/testcard.js">
+    </script>
+
+    <script type="text/javascript" src="./script/var.js">
+    </script>
+
     <script type="text/javascript"
-        src="https://uesleiamaral.github.io/challenger_oracle_jogo_da_forca/palavras/lista_palavras.json"></script>
-    <script type="text/javascript" src="./script/desenho.js"></script>
-    <script type="text/javascript" src="./script/game.js"></script>
-    <script type="text/javascript" src="./script/anima.js"></script>
-    <script type="text/javascript" src="./script/canvas_front.js"></script>
+        src="https://uesleiamaral.github.io/challenger_oracle_jogo_da_forca/palavras/lista_palavras.json">
+        </script>
+
+    <script type="text/javascript" src="./script/desenho.js">
+    </script>
+
+    <script type="text/javascript" src="./script/game.js">
+    </script>
+
+    <script type="text/javascript" src="./script/anima.js">
+    </script>
+
+    <script type="text/javascript" src="./script/canvas_front.js">
+    </script>
+
+    <script type="text/javascript" src="./script/adicionapalavra.js">
+    </script>
 
 </body>
 

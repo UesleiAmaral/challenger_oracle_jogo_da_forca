@@ -1,43 +1,32 @@
+/* INICIO STYLE CARD FRENTE */
 
 body{
+
 }
+
 *{
     margin: 0 auto;
     color: rgb(235, 235, 235);
     box-sizing: border-box;
-}
 
-#text {
-    width: 100%;
-    text-align: center;
-    font-size: 4rem;
-    margin: 0;
-    /* margin-bottom: 2%; */
-}
-
-
-#canvas_front{
-    
-    width: 40%;
-    height: 40vh;
-    min-width: 300px;
-    margin: 0 24%; 
-    /* margin-top: 4%; */
 }
 
 .container{
     width: 100%;
     height: 100vh;
     perspective: 1000;
+
 }
 
 #flip{
     transition: all 1s;
     transform-style: preserve-3d;
+
 }
 
 .flip{
     transform: rotateY(180deg);
+
 }
 
 .front {
@@ -48,7 +37,6 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    /* background-color: aqua; */
     transform: rotateY(180deg);
     position: absolute;
     backface-visibility: hidden;
@@ -59,13 +47,62 @@ body{
 
 }
 
-#nova_palavra{
-    padding: 0 2%;
-    font-size: 16px;
+#text {
+    width: 90%;
+    text-align: center;
+    font-size: 60px;
+    margin: 0;
+    margin-top: 3%;
+
+}
+
+#canvas_front{
+    max-width: 200px;
+    min-width: 200px;
+    margin: 0; 
+
+}
+
+/* ESCOLHA UMA CATEGORIA */
+.msg_escolha{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+
+}
+
+/* OPCOES DE ESCOLHA PARA CATEGORIA */
+.opcoes{
     width: 40%;
+    margin:0 30%;
+    min-width:220px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    outline-color: rgba(121, 117, 117, 0.733);
+    background-color: rgba(121, 117, 117, 0.733);
+    box-shadow: 1px 1px 20px 10px rgba(180, 180, 180, 0.733);
+    border: 1px solid rgba(121, 117, 117, 0.733);
+    border-radius: 10px;
+
+}
+
+/* ESCOLHA DE CATEGORIA */
+.checkbox{
+    margin:1% 0;
+    width: 104px;
+
+}
+
+/* TEXT AREA */
+#nova_palavra{
+    font-size: 16px;
     height: 5vh;
     resize: none;
-    margin: 0 40%;
+    margin: 2% 0;
     outline-color: rgba(121, 117, 117, 0.733);
     background-color: rgba(121, 117, 117, 0.733);
     border-radius: 10px;
@@ -73,45 +110,43 @@ body{
 
 }
 
-.visible{
-    display: none;
+/* BOTÃO PARA INICIAR O JOGO */
+.btn_jogar{
+    width: 60px;
+    height: 4vh;
+    margin: 0 18%;
+    color: whitesmoke;
+    background-color: rgba(121, 117, 117, 0.733);
+    border-radius: 10px;
+    border: 2px solid rgba(201, 198, 198, 0.644);
+
 }
 
-
+/* BOTAO JOGAR E BOTAO ADICIONAR PALAVRA */
 #btn_front{
-    margin: 0 2%;
-    margin-bottom: 8%;
-    width: 15%;
-    /* height: 20vh; */
+    width: 180px;
+
 }
+
 #btn_front:hover{
-    width: 16%;
+    width: 186px;
     box-shadow: 0px 0px 20px 1px whitesmoke;
-}
-
-.msg_Perdeu{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 50%;
-    /* height: 30%; */
-    font-size: 2rem;
-    color: rgb(228, 65, 0);
-    background-color: rgb(0, 5, 5);
-    position:absolute;
-}
-
-.msg_Ganhou{
-    font-size: 2rem;
-    color: rgb(72, 228, 0);
-    background-color: rgb(0, 5, 5);
 
 }
 
-.Msg_Letra_digitadas{
-    margin: 50%;
+.btn_header{
+    width: 60px;
+    height: 4vh;
+    margin: 0 18%;
+    margin-bottom: 10%;
+    color: whitesmoke;
+    background-color: rgba(121, 117, 117, 0.733);
+    border-radius: 10px;
+    border: 2px solid rgba(201, 198, 198, 0.644);
+
 }
+
+/* INICIO DO ESTILO CARD BACK */
 
 .game {
     width: 100%;
@@ -125,95 +160,143 @@ body{
     background-repeat: no-repeat;
     background-size: cover 10;
     background-position: bottom;
-    /* background-position-x: 40%; */
     min-width: 90%;
     position: absolute;
     backface-visibility: hidden;
 
 }
-.Msg_Letra_digitadas{
-    margin: 0px;
+
+/* MENSAGEM INFORMANDO PERDEU OU GANHOU*/
+.msg_Perdeu{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    font-size: 2rem;
+    color: rgb(228, 65, 0);
+    background-color: rgb(0, 5, 5);
+    position:absolute;
+
+}
+
+.msg_Ganhou{
+    font-size: 2rem;
+    color: rgb(72, 228, 0);
+    background-color: rgb(0, 5, 5);
+
+}
+
+/* LETRA ERRADAS DIGITADAS */
+.letras {
+    width: 100%;
+    text-align: center;
     margin-top: 12%;
+    font-weight: bold;
+
+}
+
+.Msg_Letra_digitadas{
+    width: 80%;
+    text-align: center;
+    margin: 50%;
+    margin: 0px;
     font-size: 1.2rem;
     color: rgb(255, 255, 255);
+
 }
+
+/* CHACES */
 .mostra_Chances{
     width: 100%;
     margin: 0;
-margin-top: 2%;
-text-align: center;
+    margin-top: 2%;
+    text-align: center;
+
 }
 
+/* CANVAS BACK */
 .canvas{
     width: 40%;
     height: 40vh;
     min-width: 300px;
-    /* margin: 1% 0;  */
 
 }
 
+/* EXIBE A CATEGORIA */
 .container_line_categoria{
     width: 100%;
     text-align: center;
-}
-
-span{
-    display: flex;
-    align-items: center;
-    margin: 0;
-    /* left: 22%; */
 
 }
 
+/* EXIBE A PALAVRA SECRETA */
 .palavra_secreta{
     width: 50%;
     margin:0 20%;
     margin-left:24%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     align-content: center;
 
 }
 
+/* LETRA SECRETA */
 .Letra_secreta{
-    width: 6%;
+    width: 20px;
     font-size: 1.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 3px solid rgb(245, 238, 238);
-    margin: 0 2%;
+    margin: 0 4px;
+
 }
+.input{
+    margin: 0;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+/* INPUT PARA RECEBER AS LETRAS */
 
 #letra_Digitada{
+    margin-bottom: 6%;
+    margin-left: 34%;
+    margin-right: 10% ;
     height: 4vh;
-    margin: 0;
-    margin-left: 22%;
-    margin-bottom: 3%;
     border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
     color: black;
     border-color: whitesmoke;
     border: 1px solid whitesmoke;
     outline-color: whitesmoke;
     box-shadow: 0px 0px 10px 3px whitesmoke;
+
 }
-.btn_header{
-    /* font-weight: bold; */
+
+/* BOTÃO DO GAME VOLTAR PARA HOME */
+.btn_game{
     width: 60px;
     height: 4vh;
     margin: 0;
-    margin-left: 12%;
-    margin-bottom: 3%;
+    /* margin-right:4%; */
+        margin-top: 2%;
+
+ margin-bottom: 6%;
     color: whitesmoke;
     background-color: rgba(121, 117, 117, 0.733);
     border-radius: 10px;
     border: 2px solid rgba(201, 198, 198, 0.644);
-    /* box-shadow: 1px 1px 20px 3px whitesmoke; */
+
 }
 
-.btn_header:hover{
+.btn_game:hover, .btn_header:hover{
     width: 62px;
     box-shadow: 0px 0px 20px 1px whitesmoke;
 
@@ -223,9 +306,10 @@ span{
     margin: 0;
     color: red;
     font-size: 14px;
+
 }
 
 .botoesLetras{
     display: none;
-}
 
+}

@@ -94,7 +94,7 @@ function verifica_Letra(value) {
             compara_Desenho();
             html_chances.innerHTML = "TENTATIVAS: " + chances;
             lista_Digitadas += " [ " + value + " ] ";
-            html_Exibe_letras.innerHTML = "LETRAS DIGITADAS: " + lista_Digitadas;
+            html_Exibe_letras.innerHTML = lista_Digitadas;
 
         }
         else {
