@@ -40,7 +40,7 @@ body{
     transform: rotateY(180deg);
     position: absolute;
     backface-visibility: hidden;
-    background-image: url(https://i.ibb.co/Zf78ZCw/Lousa-Escola-PNG-1280x720.png);
+    background-image: url(../Desenho-de-Lousa-PNG-1024x615.png);
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -156,9 +156,9 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-image: url(../Crianças-Ilustração-Lousa-PNG-1024x766.png);
+    background-image: url(https://i.ibb.co/Zf78ZCw/Lousa-Escola-PNG-1280x720.png);
     background-repeat: no-repeat;
-    background-size: cover 10;
+    background-size: 100%;
     background-position: bottom;
     min-width: 90%;
     position: absolute;
