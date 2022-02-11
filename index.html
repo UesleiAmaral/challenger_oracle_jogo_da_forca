@@ -11,56 +11,40 @@
 
 <body>
     <main class="container">
-        <div class="" id="flip">
+        <div class="flip" id="flip">
             <div class="front">
                 <div id="text"></div>
                 <canvas class="canvas_front" id="canvas_front">
                 </canvas>
-                <p class="msg_escolha">
-                    Aperte ENTER Para Inserir a Palavra!
-                </p>
-
+                
+                <!-- OPÇÕES DE CATEGIRIAS -->
                 <div class="opcoes">
                     <p class="msg_escolha">
                         Escolha UMA Categoria
                     </p>
+                    <p class="msg_escolha">
+                        Aperte ENTER Para Inserir a Palavra!
+                    </p>
 
-                    <div class="checkbox">
-                        <input type="checkbox" id="scales" name="scales">
-                        <label for="scales">[ Nome ]</label>
-                    </div>
-
-                    <div class="checkbox">
-                        <input type="checkbox" id="scales" name="scales">
-                        <label for="scales">[ Objeto ]</label>
-                    </div>
-
-                    <div class="checkbox">
-                        <input type="checkbox" id="scales" name="scales">
-                        <label for="scales">[ Lugar ]</label>
-                    </div>
-
-                    <div class="checkbox">
-                        <input type="checkbox" id="scales" name="scales">
-                        <label for="scales">[ Animal ]</label>
-                    </div>
-                    <textarea name="text_novaPalavra" id="nova_palavra" class="visible">
-                    </textarea>
+                    <!-- AREA PARA NOVA PALAVRA -->
+                    <input id="nova_palavra" class="visible"></input>
                 </div>
-
+                    <!-- BOTÃO PARA IR PARA TELA DO JOGO -->
                 <button class="btn_jogar" id="btn_front" onclick>JOGAR</button>
-                <button class="btn_header" id="btn_front" onclick="sorteia_Palavra()">ADCIONE NOVA PALAVRA</button>
             </div>
 
+            <!-- JOGO -->
             <div class="game">
                 <p class="msg_Perdeu"></p>
                 <p class="letras">LETRAS DIGITADAS</P>
                 <div class="Msg_Letra_digitadas"></div>
                 <P class="mostra_Chances"></P>
+                <!-- AREA DO DESENHO -->
                 <canvas class="canvas"></canvas>
                 <p class="container_line_categoria"></p>
                 <div class="palavra_secreta"></div>
 
+                <!-- AREA PARA DIGITAR A LETRA ESCOLHIDA -->
                 <div class="input">
                     <input type="text" name="letra_Digitada" id="letra_Digitada" placeholder="Digite Uma Letra!" autocomplete="off">
                     <button class="btn_game home">HOME</button>

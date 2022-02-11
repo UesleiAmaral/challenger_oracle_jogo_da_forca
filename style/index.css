@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shizuru&family=Syne+Tactile&display=swap');
 /* INICIO STYLE CARD FRENTE */
 
 body{
@@ -40,7 +41,7 @@ body{
     transform: rotateY(180deg);
     position: absolute;
     backface-visibility: hidden;
-    background-image: url(../Desenho-de-Lousa-PNG-1024x615.png);
+    background-image: url(https://i.ibb.co/Zf78ZCw/Lousa-Escola-PNG-1280x720.png);
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -48,12 +49,13 @@ body{
 }
 
 #text {
-    width: 90%;
+    width: 70%;
     text-align: center;
-    font-size: 60px;
-    margin: 0;
-    margin-top: 3%;
-
+    font-size: 3rem;
+    margin: 0 10%;
+    margin-top: 60px;
+    text-shadow: 0px 0px 12px whitesmoke;
+    font-family: 'Shizuru', cursive;
 }
 
 #canvas_front{
@@ -67,8 +69,9 @@ body{
 .msg_escolha{
     width: 100%;
     text-align: center;
-    margin: 0;
-
+    margin: 2% 0;
+    font-size: 1.4rem;
+    font-family: 'Syne Tactile', cursive;
 }
 
 /* OPCOES DE ESCOLHA PARA CATEGORIA */
@@ -82,10 +85,8 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    outline-color: rgba(121, 117, 117, 0.733);
-    background-color: rgba(121, 117, 117, 0.733);
-    box-shadow: 1px 1px 20px 10px rgba(180, 180, 180, 0.733);
-    border: 1px solid rgba(121, 117, 117, 0.733);
+    background-color: transparent;
+    border:transparent;
     border-radius: 10px;
 
 }
@@ -97,14 +98,14 @@ body{
 
 }
 
-/* TEXT AREA */
+/* INPUT */
 #nova_palavra{
     font-size: 16px;
     height: 5vh;
     resize: none;
-    margin: 2% 0;
+    margin: 2% 20%;
     outline-color: rgba(121, 117, 117, 0.733);
-    background-color: rgba(121, 117, 117, 0.733);
+    background-color: transparent;
     border-radius: 10px;
     border: 1px solid whitesmoke;
 
@@ -115,10 +116,14 @@ body{
     width: 60px;
     height: 4vh;
     margin: 0 18%;
+    margin-bottom: 120px;
     color: whitesmoke;
-    background-color: rgba(121, 117, 117, 0.733);
+    background-color: transparent;
     border-radius: 10px;
-    border: 2px solid rgba(201, 198, 198, 0.644);
+    border:transparent;
+    font-size: 1.4rem;
+    font-family: 'Syne Tactile', cursive;
+
 
 }
 
@@ -130,7 +135,7 @@ body{
 
 #btn_front:hover{
     width: 186px;
-    box-shadow: 0px 0px 20px 1px whitesmoke;
+    text-shadow: 0px 0px 10px whitesmoke;
 
 }
 
@@ -140,9 +145,9 @@ body{
     margin: 0 18%;
     margin-bottom: 10%;
     color: whitesmoke;
-    background-color: rgba(121, 117, 117, 0.733);
+    background-color: transparent;
     border-radius: 10px;
-    border: 2px solid rgba(201, 198, 198, 0.644);
+    border:transparent;
 
 }
 
@@ -156,7 +161,7 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-image: url(../Crianças-Ilustração-Lousa-PNG-1024x766.png);
+    background-image: url(https://i.ibb.co/Zf78ZCw/Lousa-Escola-PNG-1280x720.png);
     background-repeat: no-repeat;
     background-size: cover 10;
     background-position: bottom;
@@ -191,18 +196,23 @@ body{
 .letras {
     width: 100%;
     text-align: center;
-    margin-top: 12%;
+    font-size: 1.4rem;
+    margin-top: 4%;
     font-weight: bold;
+    text-shadow: 0px 0px 14px whitesmoke;
+        font-family: 'Syne Tactile', cursive;
 
+    
 }
 
 .Msg_Letra_digitadas{
     width: 80%;
     text-align: center;
-    margin: 50%;
-    margin: 0px;
+    font-weight: bold;
+    margin: 1% 0;
     font-size: 1.2rem;
-    color: rgb(255, 255, 255);
+    color: rgba(230, 230, 230, 0.973);
+    text-shadow: 0px 0px 14px rgba(253, 160, 245, 0.788);
 
 }
 
@@ -210,8 +220,12 @@ body{
 .mostra_Chances{
     width: 100%;
     margin: 0;
-    margin-top: 2%;
+    font-weight: bold;
+    font-size: 1.2rem;
     text-align: center;
+    font-family: 'Syne Tactile', cursive;
+    text-shadow: 0px 0px 14px rgba(253, 160, 245, 0.788);
+    color: rgba(230, 230, 230, 0.973);
 
 }
 
@@ -226,8 +240,10 @@ body{
 /* EXIBE A CATEGORIA */
 .container_line_categoria{
     width: 100%;
+    /* font-weight: bold; */
     text-align: center;
-
+    font-size: 1.4rem;
+    font-family: 'Shizuru', cursive;
 }
 
 /* EXIBE A PALAVRA SECRETA */
@@ -240,6 +256,8 @@ body{
     justify-content: center;
     align-items: center;
     align-content: center;
+    font-family: 'Syne Tactile', cursive;
+
 
 }
 
@@ -256,49 +274,55 @@ body{
 }
 .input{
     margin: 0;
-    width: 50%;
+    width: 20%;
+
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 /* INPUT PARA RECEBER AS LETRAS */
 
 #letra_Digitada{
-    margin-bottom: 6%;
-    margin-left: 34%;
-    margin-right: 10% ;
+    margin: 0;
+    margin-top: 10%;
+    margin-bottom: 10%;
     height: 4vh;
     border-radius: 6px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: black;
-    border-color: whitesmoke;
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    outline: transparent;
     border: 1px solid whitesmoke;
-    outline-color: whitesmoke;
-    box-shadow: 0px 0px 10px 3px whitesmoke;
 
 }
+#letra_Digitada::placeholder{
+    color: whitesmoke;
+    text-align: center;
+    font-weight: 100;
+    font-size: 1rem;
 
+
+}
 /* BOTÃO DO GAME VOLTAR PARA HOME */
 .btn_game{
-    width: 60px;
-    height: 4vh;
     margin: 0;
-    /* margin-right:4%; */
-        margin-top: 2%;
-
- margin-bottom: 6%;
+    padding: 0;
+    margin-bottom:90px;
     color: whitesmoke;
-    background-color: rgba(121, 117, 117, 0.733);
+    background-color: transparent;
     border-radius: 10px;
-    border: 2px solid rgba(201, 198, 198, 0.644);
+    border:transparent;
+    font-size: 1.4rem;
+    font-family: 'Syne Tactile', cursive;
+
 
 }
 
 .btn_game:hover, .btn_header:hover{
-    width: 62px;
-    box-shadow: 0px 0px 20px 1px whitesmoke;
+font-size: 1.5rem;
+    text-shadow: 0px 0px 10px whitesmoke;
 
 }
 

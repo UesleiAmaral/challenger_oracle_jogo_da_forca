@@ -1,31 +1,42 @@
-let palavra = {
 
-    categoria: "",
-    nome: "ola"
+function adciona_Palavra(palavras) {
+
+    const input = document.querySelector("#nova_palavra");
+    const msg_addPalavra = document.querySelector(".msg_escolha");
+
+    input.addEventListener("keyup", (event) => {
+
+        event.preventDefault();
+        let dados = input.value.toUpperCase();
+        let nova_palavra = {
+            "categoria": "Adicionada Na Home",
+            "nome": ""
+        };
+
+        if (event.key === "Enter") {
+
+            palavras.forEach((element) => {
+                
+                console.log(element.palavra.toUpperCase());
+
+                if (dados === element.palavra.toUpperCase()) {
+                    msg_addPalavra.innerHTML = 'A PALAVRA JA EXISTE!'
+
+                } else {
+                    msg_addPalavra.innerHTML = 'PALAVRA ADCIONADA!'
+                    nova_palavra.nome = dados;
+                    palavras[''] = nova_palavra;
+                    
+                }
+                
+            })
+            
+            // msg_addPalavra.innerHTML = '';
+            console.log(palavras['']);
+            input.value = '';
+
+        }
+
+    });
 
 }
-
-const visible_name = document.querySelectorAll('.nome');
-
-const text_area = document.querySelector("#nova_palavra");
-
-const add_palavra = document.querySelector(".add_palavra");
-
-const aviso = document.querySelector('.enter');
-
-const scales = document.querySelectorAll("#scales");
-
-
-add_palavra.addEventListener("click", (event) => {
-
-    event.preventDefault();
-
-    for (let i = 0; i < visible_name.length; i++) {
-
-        visible_name[i].classList.remove("visible");
-    }
-    aviso.classList.remove("visible");
-    text_area.classList.remove("visible");
-
-});
-

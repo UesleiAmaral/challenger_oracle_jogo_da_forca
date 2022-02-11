@@ -10,10 +10,12 @@ rawFile.onload = function () {
 
     file = rawFile.response;
     dados = JSON.parse(file);
-
     sorteia_Palavra(dados);
+    adciona_Palavra(dados);
 }
+
 html_chances.innerHTML = "TENTATIVAS: " + "[ " + chances + " ]";
+
 function sorteia_Palavra() {
     html_palavra_Sorteada.innerHTML = '';
     pos = Math.round(Math.random() * dados.length);
@@ -30,7 +32,7 @@ function sorteia_Palavra() {
 
 function mostra_Palavra_Dica() {
 
-    html_categoria_Sorteada.innerHTML = "Dica: " + "[" + categoria_Sorteada + "] Com " + palavra_Sorteada.length + " Letras!";
+    html_categoria_Sorteada.innerHTML = "DICA: " + "[ " + categoria_Sorteada + " ] COM " + palavra_Sorteada.length + " LETRAS!";
 
     html_palavra_Sorteada.innerHTML = "";
 

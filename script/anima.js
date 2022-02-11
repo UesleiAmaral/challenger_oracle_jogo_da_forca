@@ -1,5 +1,5 @@
 
-var string = "Jogo Da Forca!"; 
+var string = "JOGO DA FORCA!"; 
 var array = string.split("");
 var timer;
 
