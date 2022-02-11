@@ -1,3 +1,18 @@
+const dados_P = [
+    "CARTEIRA",
+    "MOUSE",
+    "NOTEBOOK",
+    "BRASIL",
+    "PARAGUAI",
+    "BAHIA",
+    "MONICA",
+    "GULHERME",
+    "MARIA",
+    "CAVALO",
+    "BORBOLETA",
+    "PERERECA"
+]
+
 const canvas_Front = document.querySelector(".canvas_front");
 const pincel_Front = canvas_Front.getContext('2d');
 
@@ -6,12 +21,10 @@ const pincel = canvas.getContext('2d');// PINCEL DO CANVAS
 const regex = new RegExp("^[A-Z]"); // LETRAS PERMITIDAS
 
 // SELEÇÃO DOS ELEMENTOS HTML
-const html_erro_Caractere = document.querySelector('.erro_Caractere');
 const html_palavra_Sorteada = document.querySelector('.palavra_secreta');
-const html_categoria_Sorteada = document.querySelector('.container_line_categoria');
+const html_msg = document.querySelector('.msg');
 const html_input = document.querySelector('#letra_Digitada');
 const html_chances = document.querySelector('.mostra_Chances');
-const html_msg = document.querySelector(".msg_Perdeu");
 const html_Exibe_letras = document.querySelector(".Msg_Letra_digitadas");
 
 
@@ -19,10 +32,7 @@ const html_Exibe_letras = document.querySelector(".Msg_Letra_digitadas");
 
 let lista_Digitadas = []; // LISTA DE LETRAS DIGITADAS ERRADA
 let lista_Letras = []; // LISTA DE LETRAS PARA COMPARAR COM A PALAVRA
-let file = ''; // RECEBE A LISTA DE PALAVRAS
-let dados = ''; // LISTA DE PALAVRA CONVERTIDA EM OBJETO
 let pos = ''; // POSIÇÃO DA LETRA NA PALAVRA
-let palavra_Sorteada = ''; 
-let categoria_Sorteada = ''; // CATEGORIA / DICA
+let palavra_Sorteada = '';
 let chances = 6;
 let erro_Length = 2;

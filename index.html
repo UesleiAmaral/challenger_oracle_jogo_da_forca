@@ -11,7 +11,7 @@
 
 <body>
     <main class="container">
-        <div class="" id="flip">
+        <div class="flip" id="flip">
             <div class="front">
                 <div id="text"></div>
                 <canvas class="canvas_front" id="canvas_front">
@@ -27,43 +27,37 @@
                     </p>
 
                     <!-- AREA PARA NOVA PALAVRA -->
-                    <input id="nova_palavra" class="visible"></input>
+                    <input id="nova_palavra" placeholder="Digite sua Palavra"></input>
                 </div>
                     <!-- BOTÃO PARA IR PARA TELA DO JOGO -->
-                <button class="btn_jogar" id="btn_front" onclick="jogo()">JOGAR</button>
+                <button class="btn_jogar" id="btn_front" onclick="">JOGAR</button>
             </div>
 
             <!-- JOGO -->
             <div class="game">
-                <p class="msg_Perdeu"></p>
                 <p class="letras">LETRAS DIGITADAS</P>
                 <div class="Msg_Letra_digitadas"></div>
                 <P class="mostra_Chances"></P>
                 <!-- AREA DO DESENHO -->
                 <canvas class="canvas"></canvas>
-                <p class="container_line_categoria"></p>
+                <p class="msg"></p>
                 <div class="palavra_secreta"></div>
 
                 <!-- AREA PARA DIGITAR A LETRA ESCOLHIDA -->
                 <div class="input">
                     <input type="text" name="letra_Digitada" id="letra_Digitada" placeholder="Digite Uma Letra!" autocomplete="off">
                     <button class="btn_game home">HOME</button>
+                    <button class="btn_game reiniciar">REINICIAR</button>
                 </div>
-                
-                <P class="erro_Caractere"></P>
             </div>
         </div>
     </main>
 
-    <script type="text/javascript" src="./script/testcard.js">
+    <script type="text/javascript" src="./script/btn.js">
     </script>
 
     <script type="text/javascript" src="./script/var.js">
     </script>
-
-    <script type="text/javascript"
-        src="https://uesleiamaral.github.io/challenger_oracle_jogo_da_forca/palavras/lista_palavras.json">
-        </script>
 
     <script type="text/javascript" src="./script/desenho.js">
     </script>
@@ -71,14 +65,10 @@
     <script type="text/javascript" src="./script/game.js">
     </script>
 
-    <script type="text/javascript" src="./script/anima.js">
-    </script>
-
     <script type="text/javascript" src="./script/canvas_front.js">
     </script>
 
-    <!-- <script type="text/javascript" src="./script/adicionapalavra.js"> -->
-    <!-- </script> -->
+
 
 </body>
 

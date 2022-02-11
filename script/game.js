@@ -1,43 +1,13 @@
-/* AS VARIAVEIS ESTÃO DECLARADAS EM " var.js "
-O DESENHO ESTA EM " desenho.js " */
-
-// OBTENDO O ARQUIVO DE PALAVRAS
-let rawFile = new XMLHttpRequest();
-rawFile.overrideMimeType("application/json");
-rawFile.open("GET", 'https://uesleiamaral.github.io/challenger_oracle_jogo_da_forca/palavras/lista_palavras.json', true);
-rawFile.send();
-rawFile.onload = function () {
-
-    file = rawFile.response;
-    dados = JSON.parse(file);
-    sorteia_Palavra(dados);
-    // adciona_Palavra(dados);
-}
 
 html_chances.innerHTML = "TENTATIVAS: " + "[ " + chances + " ]";
-
-
-function jogo() {
-    chances = 6;
-    erro_Length = 2
-    lista_Digitadas = []
-    lista_Letras = [];
-    palavra_Sorteada = sorteia_Palavra();
-    // CLEAR CANVAS
-    desenha_Area_Forca();
-    recebe_Letra();
-    verifica_Letra();
-}
-
-
-
+desenha_Area_Forca();
+sorteia_Palavra();
 
 
 function sorteia_Palavra() {
     html_palavra_Sorteada.innerHTML = '';
-    pos = Math.round(Math.random() * dados.length);
-    palavra_Sorteada = dados[pos].palavra.toUpperCase();
-    categoria_Sorteada = dados[pos].categoria.toUpperCase();
+    pos = Math.round(Math.random() * dados_P.length);
+    palavra_Sorteada = dados_P[pos].toUpperCase();
 
     recebe_Letra();
     mostra_Palavra_Dica();
@@ -45,11 +15,7 @@ function sorteia_Palavra() {
     console.log(palavra_Sorteada);
 }
 
-// desenha_Area_Forca();
-
 function mostra_Palavra_Dica() {
-
-    html_categoria_Sorteada.innerHTML = "DICA: " + "[ " + categoria_Sorteada + " ] COM " + palavra_Sorteada.length + " LETRAS!";
 
     html_palavra_Sorteada.innerHTML = "";
 
@@ -79,8 +45,6 @@ function recebe_Letra() {
 
                 mostra_Palavra_Dica();
             } else {
-                alert('CARACTERES NAO PERMITIDOS@')
-                // html_msg.classList.toggle("msg_Ganhou");
                 html_msg.innerHTML = "CARACTERES ESPECIAIS, LETRAS MINUSCULAS E NUMEROS NÃO SÃO PERIMITIDOS!";
             }
             html_input.value = "";
@@ -92,20 +56,18 @@ function recebe_Letra() {
 function verifica_Letra(value) {
 
     let vitoria = true;
-
-
     if (chances > 1) {
 
         if (value.length > 1) {
             erro_Length-- //TOTAL DE ERRO ACEITO 1 MSG 0
-            html_msg.innerHTML = 'digite apenas uma letra se persistir sera contado como erro!';
+            html_msg.innerHTML = 'DIGITE APENAS UMA LETRA, SE PERSISTIR SERÁ ERRO!';
             html_input.value = '';
 
             if (erro_Length === 0) {
                 chances--;
                 compara_Desenho();
                 html_chances.innerHTML = "TENTATIVAS: " + chances;
-                html_msg.innerHTML = 'erro contado!'
+                html_msg.innerHTML = 'ERRO CONTADO!'
 
             }
         }
@@ -133,18 +95,16 @@ function verifica_Letra(value) {
             if (vitoria === true) {
                 html_msg.classList.toggle("msg_Ganhou");
                 html_msg.innerHTML = "PARABÉNS VOCÊ VENCEU!";
-                jogo();
 
             }
         }
     }
 
-
     else {
         chances = 0;
         html_chances.innerHTML = "TENTATIVAS: " + chances;
         compara_Desenho();
-        html_msg.innerHTML = "QUE PENA TENTE NOVAMENTE!";
+        html_msg.innerHTML= "QUE PENA TENTE NOVAMENTE!";
     }
 
 }
@@ -175,4 +135,17 @@ function compara_Desenho() {
 
 }
 
-desenha_Area_Forca();
+function adciona_Palavra() {
+
+    const input = document.querySelector("#nova_palavra");
+    const msg_addPalavra = document.querySelector(".msg_escolha");
+
+    input.addEventListener("keyup", (event) => {
+
+        if (event.key === "Enter") {
+            msg_addPalavra.innerHTML = 'PALAVRA ADCIONADA!'
+            input.value = '';
+        }
+    });
+}
+adciona_Palavra();

@@ -91,13 +91,6 @@ body{
 
 }
 
-/* ESCOLHA DE CATEGORIA */
-.checkbox{
-    margin:1% 0;
-    width: 104px;
-
-}
-
 /* INPUT */
 #nova_palavra{
     font-size: 16px;
@@ -110,6 +103,11 @@ body{
     border: 1px solid whitesmoke;
 
 }
+#nova_palavra::placeholder{
+    text-align: center;
+    color: whitesmoke;
+}
+
 
 /* BOTÃO PARA INICIAR O JOGO */
 .btn_jogar{
@@ -138,7 +136,7 @@ body{
     text-shadow: 0px 0px 10px whitesmoke;
 
 }
-
+/* 
 .btn_header{
     width: 60px;
     height: 4vh;
@@ -149,7 +147,7 @@ body{
     border-radius: 10px;
     border:transparent;
 
-}
+} */
 
 /* INICIO DO ESTILO CARD BACK */
 
@@ -168,27 +166,6 @@ body{
 
     position: absolute;
     backface-visibility: hidden;
-
-}
-
-/* MENSAGEM INFORMANDO PERDEU OU GANHOU*/
-.msg_Perdeu{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 50%;
-    font-size: 2rem;
-    color: rgb(228, 65, 0);
-    background-color: rgb(0, 5, 5);
-    position:absolute;
-
-}
-
-.msg_Ganhou{
-    font-size: 2rem;
-    color: rgb(72, 228, 0);
-    background-color: rgb(0, 5, 5);
 
 }
 
@@ -237,12 +214,13 @@ body{
 
 }
 
-/* EXIBE A CATEGORIA */
-.container_line_categoria{
-    width: 100%;
+/* EXIBE A MENSAGEM */
+.msg{
+    width: 50%;
+    margin: 0 10%;
     /* font-weight: bold; */
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-family: 'Shizuru', cursive;
 }
 
@@ -274,19 +252,20 @@ body{
 }
 .input{
     margin: 0;
-    width: 20%;
-
+    margin-left: 4%;
+    width: 30%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
-/* INPUT PARA RECEBER AS LETRAS */
 
+/* INPUT PARA RECEBER AS LETRAS */
 #letra_Digitada{
-    margin: 0;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin: 0 10%;
+    margin-top: 6%;
+    margin-bottom: 6%;
     height: 4vh;
     border-radius: 6px;
     font-size: 1.2rem;
@@ -297,6 +276,7 @@ body{
     border: 1px solid whitesmoke;
 
 }
+
 #letra_Digitada::placeholder{
     color: whitesmoke;
     text-align: center;
@@ -305,11 +285,12 @@ body{
 
 
 }
+
 /* BOTÃO DO GAME VOLTAR PARA HOME */
 .btn_game{
-    margin: 0;
+    margin: 0 10%;
     padding: 0;
-    margin-bottom:90px;
+    margin-bottom:24%;
     color: whitesmoke;
     background-color: transparent;
     border-radius: 10px;
@@ -326,6 +307,10 @@ font-size: 1.5rem;
 
 }
 
+.home{
+    margin: 0 10% 24% 10%;
+}
+
 .erro_Caractere{
     margin: 0;
     color: red;
@@ -333,7 +318,23 @@ font-size: 1.5rem;
 
 }
 
-.botoesLetras{
-    display: none;
+@media screen and (max-width:320px){
 
+    #text{
+            font-size: 2.6rem;
+
+    }
+
+    .input{
+        width: 100%;
+        flex-direction: row;
+
+    }
+
+    .letras{
+        margin-top: 40px;
+        color: black;
+
+    }
 }
+
