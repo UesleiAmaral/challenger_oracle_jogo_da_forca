@@ -102,7 +102,7 @@ function verifica_Letra(value) {
         chances = 0;
         html_chances.innerHTML = "TENTATIVAS: " + chances;
         compara_Desenho();
-        html_msg.innerHTML= "QUE PENA TENTE NOVAMENTE!";
+        html_msg.innerHTML= "QUE PENA TENTE NOVAMENTE! A PALAVRA ERA: " + palavra_Sorteada;
     }
 
 }
