@@ -14,7 +14,7 @@ sair.addEventListener("click", () => {
 });
 
 reiniciar.addEventListener("click", () => {
-    
+    card.classList.remove(".flip");
     location.reload();
 
 });
