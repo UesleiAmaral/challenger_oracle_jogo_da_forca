@@ -12,7 +12,6 @@ function sorteia_Palavra() {
     recebe_Letra();
     mostra_Palavra_Dica();
 
-    console.log(palavra_Sorteada);
 }
 
 function mostra_Palavra_Dica() {
@@ -36,7 +35,6 @@ function recebe_Letra() {
 
         let value = html_input.value;
         html_msg.innerHTML = "";
-        console.log(value)
         if (event.key === "Enter") {
             event.preventDefault();
             verifica_Letra(value);
