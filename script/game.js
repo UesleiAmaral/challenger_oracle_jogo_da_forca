@@ -10,11 +10,22 @@ rawFile.onload = function () {
 
     file = rawFile.response;
     dados = JSON.parse(file);
-    sorteia_Palavra(dados);
-    adciona_Palavra(dados);
+    // adciona_Palavra(dados);
+    jogo(dados);
 }
 
 html_chances.innerHTML = "TENTATIVAS: " + "[ " + chances + " ]";
+
+function jogo() {
+
+    chances = 6;
+    erro_Length = 2
+    lista_Digitadas = []
+    lista_Letras = [];
+    palavra_Sorteada = sorteia_Palavra();
+    desenha_Area_Forca();
+    verifica_Letra();
+}
 
 function sorteia_Palavra() {
     html_palavra_Sorteada.innerHTML = '';
