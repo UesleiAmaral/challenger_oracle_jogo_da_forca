@@ -1,8 +1,20 @@
 
 html_chances.innerHTML = "TENTATIVAS: " + "[ " + chances + " ]";
-desenha_Area_Forca();
-sorteia_Palavra();
+// sorteia_Palavra();
+function inicia_Game() {
 
+    lista_Digitadas = [];
+    lista_Letras = [];
+    pos = '';
+    chances = 6;
+    erro_Length = 2;
+    palavra_Sorteada = sorteia_Palavra();
+    desenha_Area_Forca();
+    recebe_Letra();
+    mostra_Palavra_Dica();
+    recebe_Letra();
+    console.log(palavra_Sorteada)
+}
 
 function sorteia_Palavra() {
     html_palavra_Sorteada.innerHTML = '';
