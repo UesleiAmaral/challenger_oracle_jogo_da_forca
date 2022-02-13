@@ -11,8 +11,7 @@ function inicia_Game() {
     palavra_Sorteada = sorteia_Palavra();
     desenha_Area_Forca();
     recebe_Letra();
-    mostra_Palavra_Dica();
-    recebe_Letra();
+    mostra_Palavra_Dica(palavra_Sorteada);
     console.log(palavra_Sorteada)
 }
 
