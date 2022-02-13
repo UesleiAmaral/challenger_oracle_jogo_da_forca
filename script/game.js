@@ -1,6 +1,6 @@
 
 html_chances.innerHTML = "TENTATIVAS: " + "[ " + chances + " ]";
-// sorteia_Palavra();
+inicia_Game();
 function inicia_Game() {
 
     lista_Digitadas = [];
