@@ -2,7 +2,7 @@
 /* INICIO STYLE CARD FRENTE */
 
 body{
-
+    overflow: hidden;
 }
 
 *{
@@ -10,23 +10,6 @@ body{
     color: rgb(235, 235, 235);
     box-sizing: border-box;
 
-}
-
-.container{
-    width: 100%;
-    height: 100vh;
-    perspective: 1000;
-
-}
-
-#flip{
-    /* transition: all 1s;
-    transform-style: preserve-3d; */
-
-}
-
-.flip{
-    /* transform: rotateY(180deg); */
 
 }
 
@@ -38,9 +21,6 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    /* transform: rotateY(180deg);
-    position: absolute;
-    backface-visibility: hidden; */
     background-image: url(https://i.ibb.co/Zf78ZCw/Lousa-Escola-PNG-1280x720.png);
     background-size:cover;
     background-position: center;
@@ -115,7 +95,6 @@ body{
     height: 4vh;
     margin: 0 18%;
     margin-bottom: 10px;
-
     color: whitesmoke;
     background-color: transparent;
     border-radius: 10px;
@@ -154,7 +133,7 @@ body{
     background-image: url(https://i.ibb.co/Zf78ZCw/Lousa-Escola-PNG-1280x720.png);
     background-repeat: no-repeat;
     background-size:cover;
-    background-position: bottom;
+    background-position: center;
 
     /* position: absolute;
     backface-visibility: hidden; */
@@ -282,7 +261,7 @@ body{
 .btn_game{
     margin: 0 10%;
     padding: 0;
-    margin-bottom:20%;
+    margin-bottom:10%;
     color: whitesmoke;
     background-color: transparent;
     border-radius: 10px;
@@ -302,7 +281,7 @@ body{
 }
 
 .home{
-    margin: 0 10% 20% 10%;
+    margin: 0 10% 10% 10%;
 }
 
 .erro_Caractere{
@@ -320,7 +299,6 @@ footer.attribution {
     color: rgba(253, 251, 251, 0.822);
     text-align: center;
 }
-
 footer.attribution a {
     color: rgb(24, 22, 129);
     text-decoration: none;
