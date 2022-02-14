@@ -13,8 +13,9 @@ sair.addEventListener("click", () => {
     card.classList.toggle("flip");
 });
 
-reiniciar.addEventListener("click", (event) => {
-    inicia_Game();
+reiniciar.addEventListener("click", () => {
+    
+    location.reload();
 
 });
 

@@ -20,13 +20,13 @@ body{
 }
 
 #flip{
-    transition: all 1s;
-    transform-style: preserve-3d;
+    /* transition: all 1s;
+    transform-style: preserve-3d; */
 
 }
 
 .flip{
-    transform: rotateY(180deg);
+    /* transform: rotateY(180deg); */
 
 }
 
@@ -38,9 +38,9 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    transform: rotateY(180deg);
+    /* transform: rotateY(180deg);
     position: absolute;
-    backface-visibility: hidden;
+    backface-visibility: hidden; */
     background-image: url(https://i.ibb.co/Zf78ZCw/Lousa-Escola-PNG-1280x720.png);
     background-size:cover;
     background-position: center;
@@ -111,14 +111,17 @@ body{
 
 /* BOTÃO PARA INICIAR O JOGO */
 .btn_jogar{
-    width: 60px;
+    width: 70px;
     height: 4vh;
     margin: 0 18%;
     margin-bottom: 10px;
+
     color: whitesmoke;
     background-color: transparent;
     border-radius: 10px;
     border:transparent;
+    text-decoration: none;
+    text-align: center;
     font-size: 1.4rem;
     font-family: 'Syne Tactile', cursive;
 
@@ -127,27 +130,16 @@ body{
 
 /* BOTAO JOGAR E BOTAO ADICIONAR PALAVRA */
 #btn_front{
-    width: 180px;
+    width: 100px;
 
 }
 
 #btn_front:hover{
-    width: 186px;
+    text-decoration: underline;
+    font-size: 1.6rem;
     text-shadow: 0px 0px 10px whitesmoke;
 
 }
-/* 
-.btn_header{
-    width: 60px;
-    height: 4vh;
-    margin: 0 18%;
-    margin-bottom: 10%;
-    color: whitesmoke;
-    background-color: transparent;
-    border-radius: 10px;
-    border:transparent;
-
-} */
 
 /* INICIO DO ESTILO CARD BACK */
 
@@ -164,8 +156,8 @@ body{
     background-size:cover;
     background-position: bottom;
 
-    position: absolute;
-    backface-visibility: hidden;
+    /* position: absolute;
+    backface-visibility: hidden; */
 
 }
 
@@ -296,13 +288,15 @@ body{
     border-radius: 10px;
     border:transparent;
     font-size: 1.4rem;
+    text-decoration: none;
     font-family: 'Syne Tactile', cursive;
 
 
 }
 
 .btn_game:hover, .btn_header:hover{
-font-size: 1.5rem;
+    text-decoration: underline;
+    font-size: 1.6rem;
     text-shadow: 0px 0px 10px whitesmoke;
 
 }
