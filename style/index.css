@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shizuru&family=Syne+Tactile&display=swap');
 /* INICIO STYLE CARD FRENTE */
 
-body{
-    overflow: hidden;
-}
-
 *{
     margin: 0 auto;
     color: rgb(235, 235, 235);
